@@ -101,9 +101,9 @@ export default function Aboutus(){
 
             <div className="container relative md:mt-24 mt-16">
                 <div className="grid grid-cols-1 pb-6 text-center">
-                    <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Our Team</h3>
+                    <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Nosotros</h3>
 
-                    <p className="text-slate-400 max-w-xl mx-auto">This is just a simple text made for this unique and awesome template, you can replace it with any text.</p>
+                    <p className="text-slate-400 max-w-xl mx-auto">Ubicados en un espacio moderno y acogedor, nuestros consultorios están diseñados para ofrecer a los profesionales de la salud un ambiente tranquilo y profesional.</p>
                 </div>
 
                 <div className="grid md:grid-cols-12 grid-cols-1 mt-8 gap-[30px]">
@@ -135,7 +135,6 @@ export default function Aboutus(){
 
             <Client/>
 
-            <Blogs/>
         </section>
         <div className="container-fluid relative">
             <div className="grid grid-cols-1 relative">

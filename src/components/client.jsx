@@ -33,9 +33,9 @@ export default function Client(){
     return(
         <div className="container relative md:mt-24 mt-16">
         <div className="grid grid-cols-1 pb-6 text-center">
-            <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">What Our Users Say</h3>
+            <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Lo que dicen nuestros usuarios</h3>
 
-            <p className="text-slate-400 max-w-xl mx-auto">This is just a simple text made for this unique and awesome template, you can replace it with any text.</p>
+            <p className="text-slate-400 max-w-xl mx-auto">Este es solo un texto simple creado para esta plantilla única e impresionante; puedes reemplazarlo con cualquier texto.</p>
         </div>
 
         <div className="grid grid-cols-1 mt-6">

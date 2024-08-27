@@ -22,7 +22,7 @@ export default function About(){
                                 <FiUsers className="size-6"></FiUsers>
                             </div>
                             <div className="flex-1">
-                                <span className="text-slate-400">Visitor</span>
+                                <span className="text-slate-400">Visitantes</span>
                                 <p className="text-xl font-bold"><CountUp className="counter-value" start={0} end={4589}/></p>
                             </div>
                         </div>
@@ -32,8 +32,8 @@ export default function About(){
                                 <FiGlobe className="size-6"></FiGlobe>
                             </div>
                             <div className="flex-1">
-                                <span className="text-slate-400">Travel Packages</span>
-                                <p className="text-xl font-bold"><CountUp className="counter-value" start={0} end={50}/>+</p>
+                                <span className="text-slate-400">Consultorios</span>
+                                <p className="text-xl font-bold"><CountUp className="counter-value" start={0} end={100}/>+</p>
                             </div>
                         </div>
                     </div>
@@ -41,11 +41,11 @@ export default function About(){
 
                 <div className="md:col-span-7">
                     <div className="lg:ms-8">
-                        <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">World Best Travel <br/> Agency: Travosy</h3>
+                        <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Sistema de Alquiler:<br/>DoctorJobs</h3>
 
-                        <p className="text-slate-400 max-w-xl mb-6">Get instant helpful resources about anything on the go, easily implement secure money transfer solutions, boost your daily efficiency, connect to other app users and create your own Travosy network, and much more with just a few taps. commodo consequat. Duis aute irure.</p>
+                        <p className="text-slate-400 max-w-xl mb-6">Ofrecemos consultorios totalmente equipados, con mobiliario moderno y todos los suministros necesarios para garantizar una experiencia cómoda tanto para el profesional como para el paciente.</p>
 
-                        <Link to="" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md">Read More <i className="mdi mdi-chevron-right align-middle ms-0.5"></i></Link>
+                        <Link to="" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md">Leer Más <i className="mdi mdi-chevron-right align-middle ms-0.5"></i></Link>
                     </div>
                 </div>
 

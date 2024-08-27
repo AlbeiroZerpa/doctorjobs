@@ -119,7 +119,7 @@ export default function IndexFour(){
 
             <div className="container relative md:mt-24 mt-16">
                 <div className="grid grid-cols-1 pb-8 text-center">
-                    <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Tours Packages</h3>
+                    <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Paquetes de Consultorios</h3>
 
                     <p className="text-slate-400 max-w-xl mx-auto">¿Estás planeando una consulta? ¡Organizaremos tu espacio con el mejor equipamiento y dentro del mejor presupuesto!</p>
                 </div>
@@ -177,9 +177,9 @@ export default function IndexFour(){
 
             <div className="container relative md:mt-24 mt-16">
                 <div className="grid grid-cols-1 pb-6 text-center">
-                    <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Frequently Asked Questions</h3>
+                    <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Preguntas Frecuentes</h3>
 
-                    <p className="text-slate-400 max-w-xl mx-auto">This is just a simple text made for this unique and awesome template, you can replace it with any text.</p>
+                    <p className="text-slate-400 max-w-xl mx-auto">Sabemos que elegir el espacio adecuado para tu práctica es una decisión importante, y queremos asegurarnos de que tengas toda la información necesaria para tomar la mejor decisión</p>
                 </div>
 
                 <div className="relative grid md:grid-cols-12 grid-cols-1 items-center mt-6 gap-6">

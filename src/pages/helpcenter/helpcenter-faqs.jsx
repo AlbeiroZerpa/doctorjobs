@@ -23,7 +23,7 @@ export default function HelpcenterFaqs(){
             <div className="absolute inset-0 bg-black opacity-80"></div>
             <div className="container relative">
                 <div className="grid grid-cols-1 pb-8 text-center mt-10">
-                    <h3 className="text-4xl leading-normal tracking-wider font-semibold text-white">Frequently Asked Questions</h3>
+                    <h3 className="text-4xl leading-normal tracking-wider font-semibold text-white">Preguntas Frecuentes</h3>
 
                 </div>
             </div>

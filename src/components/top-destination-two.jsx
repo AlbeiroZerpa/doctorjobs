@@ -41,7 +41,7 @@ export default function TopDestinationTwo(){
     return(
             <div className="container relative">
                 <div className="grid grid-cols-1 pb-8 text-center">
-                    <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Top Destinations</h3>
+                    <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Mejores Consultorios</h3>
 
                     <p className="text-slate-400 max-w-xl mx-auto">¿Estás planeando una consulta? ¡Organizaremos tu espacio con el mejor equipamiento y dentro del mejor presupuesto!</p>
                 </div>

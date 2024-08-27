@@ -172,39 +172,39 @@ export const packages = [
 export const ClientData = [
     {
         image:client1,
-        desc:'" It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. "',
+        desc:'" Desde que empecé a alquilar un consultorio aquí, mis pacientes han comentado lo mucho que les gusta el ambiente acogedor y profesional."',
         name:'Calvin Carlo',
-        possition:'Manager'
+        possition:'Dermatólogo'
     },
     {
         image:client2,
-        desc:'"The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century."',
+        desc:'"El espacio es perfecto para mis sesiones de terapia. Es tranquilo, bien decorado, y mis pacientes siempre se sienten cómodos."',
         name:'Christa Smith',
-        possition:'Manager'
+        possition:'Fisioterapeuta'
     },
     {
         image:client3,
-        desc:'" One disadvantage of Lorum Ipsum is that in Latin certain letters appear more frequently than others. "',
+        desc:'" Lo que más me gusta de estos consultorios es la calidad de las instalaciones y el hecho de que todo está listo para usar. "',
         name:'Jemina CLone',
-        possition:'Manager'
+        possition:'Psicóloga'
     },
     {
         image:client4,
-        desc:'" Thus, Lorem Ipsum has only limited suitability as a visual filler for German texts. "',
+        desc:'" Llevo más de seis meses utilizando estos consultorios y no podría estar más contenta "',
         name:'Smith Vodka',
-        possition:'Manager'
+        possition:'Pediatra'
     },
     {
         image:client5,
-        desc:'" There is now an abundance of readable dummy texts. These are usually used when a text is required. "',
+        desc:'" Es un placer trabajar en un espacio tan bien cuidado y organizado. Los consultorios están equipados con todo lo necesario."',
         name:'Cristino Murfi',
-        possition:'Manager'
+        possition:'Nutrióloga'
     },
     {
         image:client6,
-        desc:'" According to most sources, Lorum Ipsum can be traced back to a text composed by Cicero. "',
+        desc:'" El espacio es cómodo, bien ubicado, y tiene todo lo que necesito para atender a mis pacientes. Además, la flexibilidad de alquiler es ideal para mi práctica." "',
         name:'Cristino Murfi',
-        possition:'Manager'
+        possition:'Fisioterapeuta'
     },
 ]
 
@@ -348,28 +348,28 @@ export const placeImage = [
 export const faqData = [
     {
         id:1,
-        title:'How does it work ?',
-        desc:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.'
+        title:'¿Qué servicios están incluidos en el alquiler de los consultorios?',
+        desc:'Nuestros consultorios vienen completamente equipados con mobiliario, aire acondicionado, y acceso a internet.'
     },
     {
         id:2,
-        title:'Do I need a designer to use Travosy ?',
-        desc:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.'
+        title:'¿Puedo alquilar un consultorio por horas o días específicos?',
+        desc:'Sí, ofrecemos opciones de alquiler flexibles. Puedes alquilar un consultorio por horas, medio día, días completos, o incluso semanas, según tus necesidades.'
     },
     {
         id:3,
-        title:'What do I need to do to start selling ?',
-        desc:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.'
+        title:'¿Cuál es el proceso para reservar un consultorio?',
+        desc:'Es muy sencillo. Puedes contactarnos a través de nuestro formulario de contacto en la página web o llamarnos directamente.'
     },
     {
         id:4,
-        title:'What happens when I receive an order ?',
-        desc:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.'
+        title:'¿Hay estacionamiento disponible para los pacientes?',
+        desc:'Sí, contamos con estacionamiento disponible para los pacientes, lo que facilita el acceso y comodidad para quienes visitan nuestros consultorios.'
     },
     {
         id:5,
-        title:'How does it work ?',
-        desc:'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.'
+        title:'¿Qué medidas de seguridad e higiene se implementan en los consultorios?',
+        desc:'Nos tomamos la seguridad y la higiene muy en serio. Todos los consultorios se limpian y desinfectan diariamente.'
     },
 ]
 
@@ -405,22 +405,22 @@ export const teamData = [
     {
         image:client4,
         name:'Jack John',
-        possition:'Agent'
+        possition:'Agente'
     },
     {
         image:client5,
         name:'Krista John',
-        possition:'Agent'
+        possition:'Agente'
     },
     {
         image:client6,
         name:'Roger Jackson',
-        possition:'Agent'
+        possition:'Agente'
     },
     {
         image:client7,
         name:'Johnny English',
-        possition:'Agent'
+        possition:'Agente'
     },
 ]
 
