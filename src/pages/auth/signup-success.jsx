@@ -18,11 +18,11 @@ export default function SignupSuccess(){
                             </div>
 
                             <div className="px-6 py-12 text-center">
-                                <p className="text-black font-semibold text-xl dark:text-white">Congratulations! 🎉</p> 
-                                <p className="text-slate-400 mt-4">Your account has been successfully created. <br/> Enjoy your journey. Thank you</p>
+                                <p className="text-black font-semibold text-xl dark:text-white">Felicidades! 🎉</p> 
+                                <p className="text-slate-400 mt-4"> Su cuenta ha sido creada exitosamente. <br/>Disfruta tu viaje. Gracias</p>
                                 
                                 <div className="mt-6">
-                                    <Link to="/" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md">Continue</Link>
+                                    <Link to="/" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md">Continuar</Link>
                                 </div>
                             </div>
 

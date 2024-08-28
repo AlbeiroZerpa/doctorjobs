@@ -29,7 +29,7 @@ export default function ForgotPassword(){
                                     </div>
 
                                     <div className="text-center">
-                                        <span className="text-slate-400 me-2">Remember your password ? </span><Link to="/login" className="text-black dark:text-white font-bold inline-block">Sign in</Link>
+                                        <span className="text-slate-400 me-2">Recuerda tu contraseña ? </span><Link to="/login" className="text-black dark:text-white font-bold inline-block">Sign in</Link>
                                     </div>
                                 </div>
                             </form>

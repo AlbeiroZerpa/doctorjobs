@@ -16,28 +16,28 @@ export default function Signup(){
                 <div className="flex justify-center">
                     <div className="max-w-[400px] w-full m-auto p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-700 rounded-md">
                         <Link to="/"><img src={logo} className="mx-auto" alt=""/></Link>
-                        <h5 className="my-6 text-xl font-semibold">Signup</h5>
+                        <h5 className="my-6 text-xl font-semibold">Registrarse</h5>
                         <form className="text-start" action="signup-success.html">
                             <div className="grid grid-cols-1">
                                 <div className="mb-4">
-                                    <label className="font-semibold" htmlFor="RegisterName">Your Name:</label>
+                                    <label className="font-semibold" htmlFor="RegisterName">Tu Nombre:</label>
                                     <input id="RegisterName" type="text" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Harry" required/>
                                 </div>
 
                                 <div className="mb-4">
-                                    <label className="font-semibold" htmlFor="LoginEmail">Email Address:</label>
-                                    <input id="LoginEmail" type="email" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="name@example.com" required/>
+                                    <label className="font-semibold" htmlFor="LoginEmail">Correo Eléctronico:</label>
+                                    <input id="LoginEmail" type="email" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="ejemplo@ejemplo.com" required/>
                                 </div>
 
                                 <div className="mb-4">
-                                    <label className="font-semibold" htmlFor="LoginPassword">Password:</label>
-                                    <input id="LoginPassword" type="password" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Password:" required/>
+                                    <label className="font-semibold" htmlFor="LoginPassword">Contraseña:</label>
+                                    <input id="LoginPassword" type="password" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Contraseña:" required/>
                                 </div>
 
                                 <div className="mb-4">
                                     <div className="flex items-center w-full mb-0">
                                         <input className="form-checkbox rounded border-gray-100 dark:border-gray-800 text-red-500 focus:border-red-300 focus:ring focus:ring-offset-0 focus:ring-red-500/20 focus:ring-opacity-50 me-2" type="checkbox" value="" id="AcceptT&amp;C"/>
-                                        <label className="form-check-label text-slate-400" htmlFor="AcceptT&amp;C">I Accept <Link to="" className="text-red-500">Terms And Condition</Link></label>
+                                        <label className="form-check-label text-slate-400" htmlFor="AcceptT&amp;C">Acepto <Link to="" className="text-red-500">Términos y Condiciones</Link></label>
                                     </div>
                                 </div>
 
@@ -46,7 +46,7 @@ export default function Signup(){
                                 </div>
 
                                 <div className="text-center">
-                                    <span className="text-slate-400 me-2">Already have an account ? </span> <Link to="/login" className="text-black dark:text-white font-bold inline-block">Sign in</Link>
+                                    <span className="text-slate-400 me-2">¿Ya tienes una cuenta?</span> <Link to="/login" className="text-black dark:text-white font-bold inline-block">Iniciar sesión</Link>
                                 </div>
                             </div>
                         </form>

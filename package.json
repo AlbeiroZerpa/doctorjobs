@@ -21,6 +21,7 @@
     "react-scroll": "^1.9.0",
     "sass": "^1.72.0",
     "sass-loader": "^14.1.1",
+    "start": "^5.1.0",
     "style-loader": "^3.3.4",
     "swiper": "^11.0.7",
     "tiny-slider-react": "^0.5.7",

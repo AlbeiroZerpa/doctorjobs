@@ -36,13 +36,11 @@ export default function Planes() {
       <section className="relative md:py-24 py-16">
         <div className="container relative">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 content-start gap-6">
-            <div className="bg-amber-600 border rounded-3xl text-start gap-4 p-8 bg- transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-              <h2 className="text-2xl font-semibold text-black mb-4">
-                Plan Bronce:
-              </h2>
-              <h1 className="text-4xl font-bold text-black mb-4">$50</h1>
-              <hr className="my-4 border-black" />
-              <ul className="list-disc text-black">
+          <div className="rounded-3xl text-start gap-4 p-8 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+              <h2 className="text-2xl font-semibold mb-4">Plan Bronce:</h2>
+              <h1 className="text-4xl font-bold mb-4">$50</h1>
+              <hr className="my-4 -black" />
+              <ul className="list-disc">
                 <li>1000 Créditos</li>
                 <li>Ideal para médicos emprendedores</li>
                 <li>Alquiler de consultorios</li>
@@ -54,30 +52,27 @@ export default function Planes() {
                 </button>
               </div>
             </div>
-            <div className="bg-slate-200 border rounded-3xl text-start gap-4 p-8 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-              <h2 className="text-2xl font-semibold text-black mb-4">
-                Plan Plata:
-              </h2>
-              <h1 className="text-4xl font-bold text-black mb-4">$149</h1>
-              <hr className="my-4 border-black" />
-              <ul className="list-disc text-black">
+            <div className="rounded-3xl text-start gap-4 p-8 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+              <h2 className="text-2xl font-semibold mb-4">Plan Plata:</h2>
+              <h1 className="text-4xl font-bold mb-4">$149</h1>
+              <hr className="my-4" />
+              <ul className="list-disc">
                 <li>3000 Créditos</li>
                 <li>Alquiler de consultorios y salas de reuniones</li>
                 <li>Duración: 2 meses</li>
               </ul>
               <div className="flex justify-center">
-                <button className="bg-red-500 mt-6 p-2 rounded-2xl hover:bg-blue-950 text-white hover:duration-100">
+                <button className="bg-red-500 mt-6 p-2 rounded-2xl hover:bg-blue-950 text-white transition duration-100">
                   Comprar Ahora
                 </button>
               </div>
             </div>
-            <div className="bg-yellow-400  border rounded-3xl text-start gap-4 p-8 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-              <h2 className="text-2xl font-semibold text-black mb-4">
-                Plan Oro:
-              </h2>
-              <h1 className="text-4xl font-bold text-black mb-4">$249</h1>
-              <hr className="my-4 border-black" />
-              <ul className="list-disc text-black">
+
+            <div className="rounded-3xl text-start gap-4 p-8 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+              <h2 className="text-2xl font-semibold mb-4">Plan Oro:</h2>
+              <h1 className="text-4xl font-bold mb-4">$249</h1>
+              <hr className="my-4 -black" />
+              <ul className="list-disc">
                 <li>5000 Créditos</li>
                 <li>Alquiler de consultorios y salas de reuniones</li>
                 <li>Duración: 2 meses</li>
@@ -88,15 +83,13 @@ export default function Planes() {
                 </button>
               </div>
             </div>
-            <div className="bg-cyan-400 border rounded-3xl text-start gap-4 p-8 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-              <h2 className="text-2xl font-semibold text-black mb-4">
-                Plan Oro:
-              </h2>
-              <h1 className="text-4xl font-bold text-black mb-4">$249</h1>
-              <hr className="my-4 border-black" />
-              <ul className="list-disc text-black">
-                <li>5000 Créditos</li>
-                <li>Alquiler de consultorios y salas de reuniones</li>
+            <div className="rounded-3xl text-start gap-4 p-8 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+              <h2 className="text-2xl font-semibold mb-4">Plan Diamante:</h2>
+              <h1 className="text-4xl font-bold mb-4">$990</h1>
+              <hr className="my-4 -black" />
+              <ul className="list-disc">
+                <li>20000 Créditos</li>
+                <li>Alquiler de consultorios, quirofanos y salas de reuniones</li>
                 <li>Duración: 2 meses</li>
               </ul>
               <div className="flex justify-center">
