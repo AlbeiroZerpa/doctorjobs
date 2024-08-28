@@ -83,6 +83,7 @@ export default function Navbar({ navclass, navlight, manuclass }) {
                     </div>
                 </div>
 
+
                 <ul className="buy-button list-none mb-0 space-x-1">
 
 
@@ -96,18 +97,8 @@ export default function Navbar({ navclass, navlight, manuclass }) {
                             <div className="dropdown-menu absolute end-0 m-0 mt-4 z-10 w-48 rounded-md overflow-hidden bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 ">
                                 <ul className="py-2 text-start">
                                     <li>
-                                        <Link to="/user-profile" className="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-red-500 dark:hover:text-white">
-                                            <FiUser className="size-4 me-2"></FiUser>Profile
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/helpcenter" className="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-red-500 dark:hover:text-white">
-                                            <FiHelpCircle className="size-4 me-2"></FiHelpCircle>Helpcenter
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/user-setting" className="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-red-500 dark:hover:text-white">
-                                            <FiSettings className="size-4 me-2"></FiSettings>Settings
+                                        <Link to="/configuracion" className="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-red-500 dark:hover:text-white">
+                                            <FiUser className="size-4 me-2"></FiUser>Perfil
                                         </Link>
                                     </li>
                                     <li className="border-t border-gray-100 dark:border-gray-800 my-2"></li>
