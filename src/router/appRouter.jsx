@@ -18,11 +18,7 @@ import LockScreen from '../pages/auth/lock-screen'
 import Navbar from "../components/navbar.jsx";
 import Footer from "../components/footer.jsx";
 
-import useUserStore from '../store/userStore.jsx'
-
 export const AppRouter = () => {
-
-    const { user } = useUserStore();
 
     //logica para ocultar el footer en siertas landing
     const location = useLocation();
@@ -32,9 +28,9 @@ export const AppRouter = () => {
     ].includes(location.pathname);
     const isChangeUp = [
         "/contactanos",
+        "/configuracion",
     ].includes(location.pathname);
 
-    console.log("37 => ",user)
     
     return (
         <>
