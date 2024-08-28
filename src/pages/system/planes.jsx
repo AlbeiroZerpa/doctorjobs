@@ -36,20 +36,21 @@ export default function Planes() {
       <section className="relative md:py-24 py-16">
         <div className="container relative">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 content-start gap-6">
-            <div className="bg-amber-600 border rounded-3xl text-start gap-4 p-8 bg- transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-              <h2 className="text-2xl font-semibold text-black mb-4">
+
+            <div className="text-start gap-4 p-8 transition-all duration-300 transform hover:scale-105 rounded-lg shadow-md hover:shadow-lg dark:shadow-gray-800 bg-white dark:bg-slate-900">
+              <h2 className="text-2xl font-semibold mb-4">
                 Plan Bronce:
               </h2>
-              <h1 className="text-4xl font-bold text-black mb-4">$50</h1>
-              <hr className="my-4 border-black" />
-              <ul className="list-disc text-black">
+              <h1 className="text-4xl font-bold  mb-4">$50</h1>
+              <hr className="my-4 border" />
+              <ul className="list-disc ">
                 <li>1000 Créditos</li>
                 <li>Ideal para médicos emprendedores</li>
                 <li>Alquiler de consultorios</li>
                 <li>Duración: 2 meses</li>
               </ul>
               <div className="flex justify-center">
-                <button className="bg-red-500 mt-6 p-2 rounded-2xl hover:bg-blue-950 text-white hover:duration-100">
+                <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100">
                   Comprar Ahora
                 </button>
               </div>
