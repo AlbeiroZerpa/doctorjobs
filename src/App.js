@@ -16,6 +16,7 @@ import Aboutus from './pages/aboutus'
 import UserProfile from './pages/account/user-profile'
 import UserPayment from './pages/account/user-payment'
 import UserInvoice from './pages/account/user-invoice'
+import UserContratados from './pages/account/user-contratados.jsx'
 import UserSocial from './pages/account/user-social'
 import UserNotification from './pages/account/user-notification'
 import UserSetting from './pages/account/user-setting'
@@ -33,6 +34,7 @@ import Privacy from './pages/utility/privacy'
 import Comingsoon from './pages/special/comingsoon'
 import Maintenance from './pages/special/maintenance'
 import Error from './pages/special/404'
+import Planes from './pages/planes.jsx'
 import Contact from './pages/contact'
 
 function App() {
@@ -52,6 +54,7 @@ function App() {
     <Route path="/user-profile" element={<UserProfile/>}/>
     <Route path="/user-payment" element={<UserPayment/>}/>
     <Route path="/user-invoice" element={<UserInvoice/>}/>
+    <Route path="/user-contratados" element={<UserContratados/>}/>
     <Route path="/user-social" element={<UserSocial/>}/>
     <Route path="/user-notification" element={<UserNotification/>}/>
     <Route path="/user-setting" element={<UserSetting/>}/>
@@ -69,6 +72,7 @@ function App() {
     <Route path="/comingsoon" element={<Comingsoon/>}/>
     <Route path="/maintenance" element={<Maintenance/>}/>
     <Route path="/404" element={<Error/>}/>
+    <Route path="/planes" element={<Planes/>}/>
     <Route path="/contact" element={<Contact/>}/>
    </Routes>
   );

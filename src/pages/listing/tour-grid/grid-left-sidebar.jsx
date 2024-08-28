@@ -25,9 +25,9 @@ export default function GridLeftSidebar(){
             
             <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
                 <ul className="tracking-[0.5px] mb-0 inline-block">
-                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><Link to="/">Travosy</Link></li>
+                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><Link to="/">Inicio</Link></li>
                     <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
-                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">Tour</li>
+                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">Alquiler de Espacios Fisicos</li>
                 </ul>
             </div>
         </section>
@@ -41,7 +41,7 @@ export default function GridLeftSidebar(){
                         <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
                             {packages.map((item,index)=>{
                                 return(
-                                    <div className="group rounded-md shadow dark:shadow-gray-700" key={index}>
+                                    <div className="group border-2 rounded-md shadow dark:shadow-gray-700" key={index}>
                                         <div className="relative overflow-hidden rounded-t-md shadow dark:shadow-gray-700 mx-3 mt-3">
                                             <img src={item.image} className="scale-125 group-hover:scale-100 duration-500" alt=""/>
                                             {item.tagText && (
@@ -60,7 +60,7 @@ export default function GridLeftSidebar(){
                                             <Link to={`/tour-detail-one/${item.id}`} className="text-lg font-medium hover:text-red-500 duration-500 ease-in-out">{item.title}</Link>
 
                                             <div className="flex items-center mt-2">
-                                                <span className="text-slate-400">Rating:</span>
+                                                <span className="text-slate-400">Puntuación:</span>
                                                 <ul className="text-lg font-medium text-amber-400 list-none ms-2 space-x-1">
                                                     <li className="inline"><i className="mdi mdi-star align-middle"></i></li>
                                                     <li className="inline"><i className="mdi mdi-star align-middle"></i></li>
@@ -74,7 +74,7 @@ export default function GridLeftSidebar(){
                                             <div className="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
                                                 <h5 className="text-lg font-medium text-red-500">{item.amount}</h5>
 
-                                                <Link to="" className="text-slate-400 hover:text-red-500">Explore Now <i className="mdi mdi-arrow-right"></i></Link>
+                                                <Link to="" className="text-slate-400 hover:text-red-500">Ver Ahora <i className="mdi mdi-arrow-right"></i></Link>
                                             </div>
                                         </div>
                                     </div>

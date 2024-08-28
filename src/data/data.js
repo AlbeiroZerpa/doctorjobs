@@ -86,35 +86,35 @@ export const packages = [
         tagText:'10% Off',
         place:'Dubai',
         title:'Cuba Sailing Adventure',
-        amount:'$ 58 / Day'
+        amount:'$ 58 / Día'
     },
     {
         id:2,
         image:listing2,
         place:'Italy',
         title:'Tour in New York',
-        amount:'$ 58 / Day'
+        amount:'$ 58 / Día'
     },
     {
         id:3,
         image:listing3,
         place:'Maldivas',
         title:'Discover Greece',
-        amount:'$ 58 / Day'
+        amount:'$ 58 / Día'
     },
     {
         id:4,
         image:listing4,
         place:'USA',
         title:'Museum of Modern Art',
-        amount:'$ 58 / Day'
+        amount:'$ 58 / Día'
     },
     {
         id:5,
         image:listing5,
         place:'Bali',
         title:'Peek Mountain View',
-        amount:'$ 58 / Day'
+        amount:'$ 58 / Día'
     },
     {
         id:6,
@@ -122,14 +122,14 @@ export const packages = [
         tagText:'25% Off',
         place:'Bangkok',
         title:'Hot Baloon Journey',
-        amount:'$ 58 / Day'
+        amount:'$ 58 / Día'
     },
     {
         id:7,
         image:listing7,
         place:'Singapore',
         title:'Orca Camp Kayaking Trip',
-        amount:'$ 58 / Day'
+        amount:'$ 58 / Día'
     },
     {
         id:8,
@@ -137,35 +137,35 @@ export const packages = [
         tagText:'20% Off',
         place:'Thailand',
         title:'Caño Cristales River Trip',
-        amount:'$ 58 / Day'
+        amount:'$ 58 / Día'
     },
     {
         id:9,
         image:listing9,
         place:'Pattaya',
         title:'Osa Peninsula to Dominical',
-        amount:'$ 58 / Day'
+        amount:'$ 58 / Día'
     },
     {
         id:10,
         image:listing10,
         place:'Lakshadweep',
         title:'History of The Emporer',
-        amount:'$ 58 / Day'
+        amount:'$ 58 / Día'
     },
     {
         id:11,
         image:listing11,
         place:'Paris',
         title:'Wildness of Paris',
-        amount:'$ 58 / Day'
+        amount:'$ 58 / Día'
     },
     {
         id:12,
         image:listing12,
         place:'London',
         title:'The Hills and Mountains',
-        amount:'$ 58 / Day'
+        amount:'$ 58 / Día'
     },
 ]
 
@@ -316,7 +316,7 @@ export const footerSocial = [
 
 export const footerCompany = [
     {
-        name:'About us',
+        name:'Nosotros',
         link:'/aboutus'
     },
     {

@@ -46,6 +46,13 @@ export default function AccountingTab(){
                                 </Link>
                             </li>
 
+                            <li className={`navbar-item account-menu ${current === '/user-contratados' ? 'active' : ''}`}>
+                                <Link to="/user-contratados" className="navbar-link text-slate-400 flex items-center py-2 rounded">
+                                    <span className="me-2 mb-0"><FiFileText className="size-4"></FiFileText></span>
+                                    <h6 className="mb-0 font-medium">Contratados</h6>
+                                </Link>
+                            </li>
+
                             <li className={`navbar-item account-menu ${current === '/user-invoice' ? 'active' : ''}`}>
                                 <Link to="/user-invoice" className="navbar-link text-slate-400 flex items-center py-2 rounded">
                                     <span className="me-2 mb-0"><FiFileText className="size-4"></FiFileText></span>

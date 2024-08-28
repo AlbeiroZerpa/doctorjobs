@@ -83,15 +83,15 @@ export default function Aboutus(){
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900"></div>
             <div className="container relative">
                 <div className="grid grid-cols-1 pb-8 text-center mt-10">
-                    <h3 className="text-4xl leading-normal tracking-wider font-semibold text-white">Travosy Travel Agency</h3>
+                    <h3 className="text-4xl leading-normal tracking-wider font-semibold text-white">Nosotros</h3>
                 </div>
             </div>
             
             <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
                 <ul className="tracking-[0.5px] mb-0 inline-block">
-                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><Link to="/">Travosy</Link></li>
+                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><Link to="/">Inicio</Link></li>
                     <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180"><i className="mdi mdi-chevron-right"></i></li>
-                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">About Us</li>
+                    <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">Nosotros</li>
                 </ul>
             </div>
         </section>
@@ -103,7 +103,7 @@ export default function Aboutus(){
                 <div className="grid grid-cols-1 pb-6 text-center">
                     <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Nosotros</h3>
 
-                    <p className="text-slate-400 max-w-xl mx-auto">Ubicados en un espacio moderno y acogedor, nuestros consultorios están diseñados para ofrecer a los profesionales de la salud un ambiente tranquilo y profesional.</p>
+                    <p className="text-slate-400 max-w-xl mx-auto">Te Ubicamos en un espacio moderno y acogedor, nuestros consultorios están diseñados para ofrecer a los profesionales de la salud un ambiente tranquilo y profesional.</p>
                 </div>
 
                 <div className="grid md:grid-cols-12 grid-cols-1 mt-8 gap-[30px]">

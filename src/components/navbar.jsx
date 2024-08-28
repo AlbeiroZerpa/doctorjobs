@@ -156,6 +156,7 @@ export default function Navbar({navclass, navlight, manuclass}){
                         <li className={`${manu === '/index-item' ? 'active' : '' }`}><Link to="/" className="sub-menu-item">Inicio</Link></li>
                         <li className={`${manu === '/aboutus' ? 'active' : '' }`}><Link to="/aboutus" className="sub-menu-item">Nosotros</Link></li>
                         <li className={`${manu === '/grid-left-sidebar' ? 'active' : '' }`}><Link to="/grid-left-sidebar" className="sub-menu-item">Alquiler de Espacios Fisicos</Link></li>
+                        <li className={`${manu === '/planes' ? 'active' : '' }`}><Link to="/planes" className="sub-menu-item">Planes</Link></li>
                         <li className={`${manu === '/contact' ? 'active' : '' }`}><Link to="/contact" className="sub-menu-item">Contáctanos</Link></li>
                     </ul>
                 </div>
