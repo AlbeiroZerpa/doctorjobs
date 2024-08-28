@@ -8,7 +8,7 @@ import Switcher from "../../components/switcher";
 
 import {FiUser, FiUserCheck, FiMail, FiBookmark,FiMessageCircle, FiPhone, FiGlobe,FiKey} from "../../assets/icons/vander"
 
-export default function UserSetting(){
+export default function Configuracion(){
     return(
         <>
         <Navbar navclass="defaultscroll is-sticky" navlight={false} manuclass="justify-end"/>

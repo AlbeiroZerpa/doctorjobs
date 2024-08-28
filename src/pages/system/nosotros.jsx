@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
-import Navbar from "../components/navbar";
+import Navbar from "../../components/navbar";
 import { Link } from "react-router-dom";
 
-import Blogs from '../components/blogs'
-import Client from '../components/client'
-import About from '../components/about'
-import Footer from '../components/footer';
-import Switcher from '../components/switcher';
+import Blogs from '../../components/blogs'
+import Client from '../../components/client'
+import About from '../../components/about'
+import Footer from '../../components/footer';
+import Switcher from '../../components/switcher';
 
-import { teamData,placeImage } from "../data/data";
+import { teamData,placeImage } from "../../data/data";
 
-import {FiFacebook, FiInstagram, FiLinkedin} from "../assets/icons/vander"
+import {FiFacebook, FiInstagram, FiLinkedin} from "../../assets/icons/vander"
 
 import TinySlider from "tiny-slider-react";
 import 'tiny-slider/dist/tiny-slider.css';
@@ -18,7 +18,7 @@ import 'tiny-slider/dist/tiny-slider.css';
 import Lightbox from 'react-18-image-lightbox';
 import "react-18-image-lightbox/style.css"
 
-export default function Aboutus(){
+export default function Nosotros(){
     let [isOpen, setisOpen] = useState(false);
     let [currentImageIndex, setCurrentImageIndex] = useState(0);
 

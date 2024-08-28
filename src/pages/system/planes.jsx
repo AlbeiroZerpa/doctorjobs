@@ -1,18 +1,10 @@
 import React from "react";
-import Navbar from "../components/navbar";
 import { Form, Link } from "react-router-dom";
-import Switcher from "../components/switcher";
-import Footer from "../components/footer";
+import Switcher from "../../components/switcher";
 
 export default function Planes() {
   return (
     <>
-      <Navbar
-        navclass="defaultscroll is-sticky"
-        navlight={true}
-        manuclass="justify-end nav-light"
-      />
-
       <section className="relative table w-full items-center py-36 bg-[url('../../assets/images/bg/cta.jpg')] bg-top bg-no-repeat bg-cover">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900"></div>
         <div className="container relative">
@@ -116,7 +108,6 @@ export default function Planes() {
           </div>
         </div>
       </section>
-      <Footer />
       <Switcher />
     </>
   );

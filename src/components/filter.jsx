@@ -13,7 +13,7 @@ export default function Filter(){
     }
 
     return(
-        <div className="lg:col-span-4 md:col-span-5">
+        <div className="col-span-12 lg:col-span-3">
             <div className="p-4 rounded-md shadow dark:shadow-gray-700 sticky top-20">
                 <div>
                     <h5 className="text-lg font-medium">Filtrar Precio</h5>

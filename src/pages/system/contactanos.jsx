@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import travel from '../assets/images/travel-train-station.svg'
+import travel from '../../assets/images/travel-train-station.svg'
 
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
-import Switcher from "../components/switcher";
+import Navbar from "../../components/navbar";
+import Footer from "../../components/footer";
+import Switcher from "../../components/switcher";
 
-import {FiPhone, FiMail,FiMapPin, FiX} from '../assets/icons/vander'
+import {FiPhone, FiMail,FiMapPin, FiX} from '../../assets/icons/vander'
 
-export default function Contact(){
+export default function Contactanos(){
     let [modal, setModal] = useState(false)
     return(
         <>
-        <Navbar navclass="defaultscroll is-sticky" navlight={false} manuclass="justify-end"/>
         <div className="container-fluid relative mt-20">
             <div className="grid grid-cols-1">
                 <div className="w-full leading-[0] border-0">
@@ -118,7 +117,6 @@ export default function Contact(){
                 </div>
             </div>
         </section>
-        <Footer/>
         <Switcher/>
         {modal && (
             <div className="w-full h-screen bg-slate-900/80 fixed top-0 left-0 bottom-0 right-0 z-999 flex items-center justify-center">

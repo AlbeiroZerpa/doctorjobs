@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import Tagline from "../../components/tagline";
-import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import Switcher from "../../components/switcher";
-import TopDestinationTwo from "../../components/top-destination-two";
 import Client from "../../components/client";
 
 import faqImg from "../../assets/images/bg/6.jpg";
@@ -37,12 +34,6 @@ export default function IndexFour() {
   let [activeIndex, setActiveIndex] = useState(1);
   return (
     <>
-      <Tagline />
-      <Navbar
-        navclass="defaultscroll is-sticky tagline-height"
-        navlight={true}
-        manuclass="justify-end nav-light"
-      />
       <section
         className="relative py-36  bg-cover jarallax"
         data-jarallax
@@ -209,7 +200,6 @@ export default function IndexFour() {
       </div>
 
       <section className="relative md:py-24 py-16">
-        <TopDestinationTwo />
 
         <div className="container relative md:mt-24 mt-16">
           <div className="grid grid-cols-1 pb-8 text-center">
@@ -310,7 +300,7 @@ export default function IndexFour() {
               to="/grid-right-sidebar"
               className="text-slate-400 hover:text-red-500 inline-block"
             >
-              See More Tours{" "}
+              Ver más{" "}
               <i className="mdi mdi-arrow-right align-middle"></i>
             </Link>
           </div>
@@ -384,7 +374,7 @@ export default function IndexFour() {
           </div>
         </div>
       </section>
-      <Footer />
+
       <Switcher />
     </>
   );

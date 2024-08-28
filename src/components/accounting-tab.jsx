@@ -35,49 +35,14 @@ export default function AccountingTab(){
                             <li className={`navbar-item account-menu ${current === '/user-profile' ? 'active' : ''}`}>
                                 <Link to="/user-profile" className="navbar-link text-slate-400 flex items-center py-2 rounded">
                                     <span className="me-2 mb-0"><FiAirplay className="size-4"></FiAirplay></span>
-                                    <h6 className="mb-0 font-medium">Profile</h6>
-                                </Link>
-                            </li>
-
-                            <li className={`navbar-item account-menu ${current === '/user-payment' ? 'active' : ''}`}>
-                                <Link to="/user-payment" className="navbar-link text-slate-400 flex items-center py-2 rounded">
-                                    <span className="me-2 mb-0"><FiCreditCard className="size-4"></FiCreditCard></span>
-                                    <h6 className="mb-0 font-medium">Payment</h6>
+                                    <h6 className="mb-0 font-medium">Perfil</h6>
                                 </Link>
                             </li>
 
                             <li className={`navbar-item account-menu ${current === '/user-contratados' ? 'active' : ''}`}>
                                 <Link to="/user-contratados" className="navbar-link text-slate-400 flex items-center py-2 rounded">
                                     <span className="me-2 mb-0"><FiFileText className="size-4"></FiFileText></span>
-                                    <h6 className="mb-0 font-medium">Contratados</h6>
-                                </Link>
-                            </li>
-
-                            <li className={`navbar-item account-menu ${current === '/user-invoice' ? 'active' : ''}`}>
-                                <Link to="/user-invoice" className="navbar-link text-slate-400 flex items-center py-2 rounded">
-                                    <span className="me-2 mb-0"><FiFileText className="size-4"></FiFileText></span>
-                                    <h6 className="mb-0 font-medium">Invoice</h6>
-                                </Link>
-                            </li>
-
-                            <li className={`navbar-item account-menu ${current === '/user-social' ? 'active' : ''}`}>
-                                <Link to="/user-social" className="navbar-link text-slate-400 flex items-center py-2 rounded">
-                                    <span className="me-2 mb-0"><FiShare2 className="size-4"></FiShare2></span>
-                                    <h6 className="mb-0 font-medium">Social Profile</h6>
-                                </Link>
-                            </li>
-
-                            <li className={`navbar-item account-menu ${current === '/user-notification' ? 'active' : ''}`}>
-                                <Link to="/user-notification" className="navbar-link text-slate-400 flex items-center py-2 rounded">
-                                    <span className="me-2 mb-0"><FiBell className="size-4"></FiBell></span>
-                                    <h6 className="mb-0 font-medium">Notifications</h6>
-                                </Link>
-                            </li>
-
-                            <li className={`navbar-item account-menu ${current === '/user-setting' ? 'active' : ''}`}>
-                                <Link to="/user-setting" className="navbar-link text-slate-400 flex items-center py-2 rounded">
-                                    <span className="me-2 mb-0"><FiSettings className="size-4"></FiSettings></span>
-                                    <h6 className="mb-0 font-medium">Settings</h6>
+                                    <h6 className="mb-0 font-medium">Verificación</h6>
                                 </Link>
                             </li>
 

@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Navbar from "../../../components/navbar";
-import Filter from "../../../components/filter";
-import Footer from "../../../components/footer";
-import Switcher from "../../../components/switcher";
+import Navbar from "../../components/navbar";
+import Filter from "../../components/filter";
+import Footer from "../../components/footer";
+import Switcher from "../../components/switcher";
 
-import { packages } from "../../../data/data";
+import { packages } from "../../data/data";
 
-import {FiMapPin, FiChevronLeft, FiChevronRight} from '../../../assets/icons/vander'
+import {FiMapPin, FiChevronLeft, FiChevronRight} from '../../assets/icons/vander'
 
-export default function GridLeftSidebar(){
+export default function Alquileres(){
     return(
         <>
         <Navbar navclass="defaultscroll is-sticky" navlight={true} manuclass="justify-end nav-light"/>
@@ -37,8 +37,8 @@ export default function GridLeftSidebar(){
                 <div className="grid md:grid-cols-12 grid-cols-1 gap-6">
                     <Filter/>
 
-                    <div className="lg:col-span-8 md:col-span-7">
-                        <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
+                    <div className="col-span-12 lg:col-span-9">
+                        <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-6">
                             {packages.map((item,index)=>{
                                 return(
                                     <div className="group border-2 rounded-md shadow dark:shadow-gray-700" key={index}>
@@ -119,7 +119,6 @@ export default function GridLeftSidebar(){
                 </div>
             </div>
         </section>
-        <Footer/>
         <Switcher/>
         </>
     )
