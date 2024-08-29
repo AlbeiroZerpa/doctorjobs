@@ -6,6 +6,7 @@ import Index from '../pages/system/index'
 import Nosotros from '../pages/system/nosotros.jsx'
 import Alquileres from "../pages/system/alquileres.jsx";
 import Planes from '../pages/system/planes.jsx'
+import VerificacionPlanes from "../pages/system/verificacionPlanes.jsx";
 import Contactanos from "../pages/system/contactanos.jsx";
 import Configuracion from '../pages/system/configuracion.jsx'
 import Login from '../pages/auth/login'
@@ -33,7 +34,8 @@ export const AppRouter = () => {
     const isChangeUp = [
         "/contactanos",
         "/configuracion",
-        "/signup-success"
+        "/signup-success",
+        "/verificacion-pago-planes"
     ].includes(location.pathname);
 
     console.log("37 => ",user)
@@ -54,6 +56,7 @@ export const AppRouter = () => {
                 <Route path="/planes" element={<Planes />} />
                 <Route path="/contactanos" element={<Contactanos />} />
                 <Route path="/configuracion" element={<Configuracion />} />
+                <Route path="/verificacion-pago-planes" element={<VerificacionPlanes />} />
 
 
                 <Route path="/login" element={<Login />} />

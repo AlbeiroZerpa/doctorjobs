@@ -1,8 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 import Switcher from "../../components/switcher";
+import { Spinner } from "react-activity";
+
+import useUserStore from "../../store/userStore";
 
 export default function Planes() {
+
+  const { addPuntos } = useUserStore();
+  const navigate = useNavigate();
+
+  // Estado para controlar si está cargando
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleCompra = (item) => {
+    setIsLoading(true)
+    setTimeout(() => {
+      addPuntos(item)
+      navigate("/verificacion-pago-planes")
+    },1500)
+  }
+
   return (
     <>
       <section className="relative table w-full items-center py-36 bg-[url('../../assets/images/bg/cta.jpg')] bg-top bg-no-repeat bg-cover">
@@ -49,8 +68,8 @@ export default function Planes() {
                 <li>Duración: 2 meses</li>
               </ul>
               <div className="flex justify-center">
-                <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100">
-                  Comprar Ahora
+                <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100 w-full" onClick={() => handleCompra(1000)}>
+                {isLoading ? <Spinner className="mx-auto block" /> : 'Comprar Ahora'}
                 </button>
               </div>
             </div>
@@ -58,7 +77,7 @@ export default function Planes() {
               <h2 className="text-2xl font-semibold mb-4">
                 Plan Plata:
               </h2>
-              <h1 className="text-4xl font-bold  mb-4">$50</h1>
+              <h1 className="text-4xl font-bold  mb-4">$140</h1>
               <hr className="my-4 border" />
               <ul className="list-disc ">
                 <li>3000 Créditos</li>
@@ -66,8 +85,8 @@ export default function Planes() {
                 <li>Duración: 2 meses</li>
               </ul>
               <div className="flex justify-center">
-                <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100">
-                  Comprar Ahora
+              <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100 w-full" onClick={() => handleCompra(3000)}>
+                {isLoading ? <Spinner className="mx-auto block" /> : 'Comprar Ahora'}
                 </button>
               </div>
             </div>
@@ -75,7 +94,7 @@ export default function Planes() {
               <h2 className="text-2xl font-semibold mb-4">
                 Plan Oro:
               </h2>
-              <h1 className="text-4xl font-bold  mb-4">$50</h1>
+              <h1 className="text-4xl font-bold  mb-4">$249</h1>
               <hr className="my-4 border" />
               <ul className="list-disc ">
                 <li>5000 Créditos</li>
@@ -83,25 +102,25 @@ export default function Planes() {
                 <li>Duración: 2 meses</li>
               </ul>
               <div className="flex justify-center">
-                <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100">
-                  Comprar Ahora
+              <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100 w-full" onClick={() => handleCompra(5000)}>
+                {isLoading ? <Spinner className="mx-auto block" /> : 'Comprar Ahora'}
                 </button>
               </div>
             </div>
             <div className="text-start gap-4 p-8 transition-all duration-300 transform hover:scale-105 rounded-lg shadow-md hover:shadow-lg dark:shadow-gray-800 bg-white dark:bg-slate-900">
               <h2 className="text-2xl font-semibold mb-4">
-                Plan Oro:
+                Plan Diamante:
               </h2>
-              <h1 className="text-4xl font-bold  mb-4">$50</h1>
+              <h1 className="text-4xl font-bold  mb-4">$990</h1>
               <hr className="my-4 border" />
               <ul className="list-disc ">
-                <li>5000 Créditos</li>
+                <li>20000 Créditos</li>
                 <li>Alquiler de consultorios y salas de reuniones</li>
                 <li>Duración: 2 meses</li>
               </ul>
               <div className="flex justify-center">
-                <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100">
-                  Comprar Ahora
+              <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100 w-full" onClick={() => handleCompra(20000)}>
+                {isLoading ? <Spinner className="mx-auto block" /> : 'Comprar Ahora'}
                 </button>
               </div>
             </div>
