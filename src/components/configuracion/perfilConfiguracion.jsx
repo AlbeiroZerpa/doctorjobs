@@ -32,7 +32,7 @@ export const PerfilConfiguracion = () => {
                         <div>
                             <label className="form-label font-medium">Contraseña : </label>
                             <div className="form-icon relative mt-2">
-                                <FiBookmark className="w-4 h-4 absolute top-3 start-4"></FiBookmark>
+                                <FiKey className="w-4 h-4 absolute top-3 start-4"></FiKey>
                                 <input name="name" id="occupation" type="text" className="ps-12 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Contraseña :" />
                             </div>
                         </div>
