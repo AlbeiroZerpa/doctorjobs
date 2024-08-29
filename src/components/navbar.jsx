@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import logoDark from "../assets/images/logo-dark.png";
 import logoLight from "../assets/images/logo-light.png";
@@ -20,6 +20,7 @@ export default function Navbar({ navclass, navlight, manuclass }) {
     const userRef = useRef(null);
     const location = useLocation();
     const { user, logout } = useUserStore();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -57,6 +58,7 @@ export default function Navbar({ navclass, navlight, manuclass }) {
     const handleLogout = (e) => {
         e.preventDefault()
         logout()
+        navigate("/")
     }
 
     return (
@@ -94,7 +96,7 @@ export default function Navbar({ navclass, navlight, manuclass }) {
                 {user && (<ul className="buy-button list-none">
                     <li className="dropdown inline-block relative pe-1">
                         <p>
-                            0 Pts
+                            {user.puntos} Pts
                         </p>
                     </li>
                     <li className="dropdown inline-block relative ps-0.5" ref={userRef}>
@@ -114,7 +116,7 @@ export default function Navbar({ navclass, navlight, manuclass }) {
                                     <li className="border-t border-gray-100 dark:border-gray-800 my-2"></li>
                                     <li>
                                         <Link to="#" onClick={handleLogout} className="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-red-500 dark:hover:text-white">
-                                            <FiLogOut className="size-4 me-2"></FiLogOut>Logout
+                                            <FiLogOut className="size-4 me-2"></FiLogOut>Salir
                                         </Link>
                                     </li>
                                 </ul>

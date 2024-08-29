@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import logo from '../../assets/images/logo-icon.png'
 import Switcher from "../../components/switcher";
@@ -7,14 +7,30 @@ import BackToHome from "../../components/back-to-home";
 
 import useUserStore from '../../store/userStore'
 
+import { Spinner } from "react-activity";
+import "react-activity/dist/library.css";
+
 export default function Login() {
 
     const { login } = useUserStore();
+    const navigate = useNavigate();
+
+    // Estado para controlar si está cargando
+    const [isLoading, setIsLoading] = useState(false);
+
+    // Estado para almacenar los valores de los errores
+    const [errores, setErrores] = useState({
+        email: null,
+        password: null
+    })
 
     // Estado para almacenar los valores de los campos
     const [formData, setFormData] = useState({
         password: '',
         email: '',
+        puntos: 0,
+        name: 'John',
+        apellido: 'Doe'
     });
 
     // Función para manejar los cambios en los inputs
@@ -29,7 +45,42 @@ export default function Login() {
     // Función para manejar el envío del formulario
     const handleSubmit = (e) => {
         e.preventDefault();
-        login('John Doe');
+
+        setIsLoading(true)
+
+        setTimeout(() => {
+            if (formData.email !== "cliente@gmail.com" || formData.password !== "123") {
+                if (formData.email !== "cliente@gmail.com") {
+                    setErrores((prevState) => ({
+                        ...prevState,
+                        email: "El email no esta registrado"
+                    }));
+                    setIsLoading(false)
+                    return setTimeout(() => {
+                        setErrores((prevState) => ({
+                            ...prevState,
+                            email: null
+                        })); 
+                    },1500)
+                } else {
+                    setErrores((prevState) => ({
+                        ...prevState,
+                        password: "Contraseña incorrecta"
+                    }));
+                    setIsLoading(false)
+                    return setTimeout(() => {
+                        setErrores((prevState) => ({
+                            ...prevState,
+                            email: null
+                        })); 
+                    },1500)
+                }
+            } else {
+                login(formData);
+                navigate('/');
+            }
+        }, 1500);
+
     };
 
     return (
@@ -47,11 +98,13 @@ export default function Login() {
                                     <div className="mb-4">
                                         <label className="font-semibold" htmlFor="LoginEmail">Correo Eléctronico:</label>
                                         <input name="email" onChange={handleChange} value={formData.email} type="email" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="ejemplo@ejemplo.com" required />
+                                        {errores.email !== null && <label className="text-red-600">{errores.email}</label>}
                                     </div>
 
                                     <div className="mb-4">
                                         <label className="font-semibold" htmlFor="LoginPassword">Contraseña :</label>
                                         <input name="password" onChange={handleChange} value={formData.password} type="password" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Contraseña:" required />
+                                        {errores.password !== null && <label className="text-red-600">{errores.password}</label>}
                                     </div>
 
                                     <div className="flex justify-content-center mb-4">
@@ -59,7 +112,9 @@ export default function Login() {
                                     </div>
 
                                     <div className="mb-4">
-                                        <input type="submit" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md w-full" value="Iniciar Sesión" />
+                                        <button type="submit" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md w-full">
+                                            {isLoading ? <Spinner className="mx-auto block" /> : 'Iniciar Sesión'}
+                                        </button>
                                     </div>
 
                                     <div className="text-center">

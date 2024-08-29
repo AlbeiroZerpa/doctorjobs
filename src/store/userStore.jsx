@@ -4,7 +4,7 @@ const useUserStore = create((set) => ({
   user: null,
 
   // Acción para loguear al usuario
-  login: (name) => set({ user: { name, points: 0 } }),
+  login: ( data ) => set({ user: data }),
 
   // Acción para desloguear al usuario
   logout: () => set({ user: null }),

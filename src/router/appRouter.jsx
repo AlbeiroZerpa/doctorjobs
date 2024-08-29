@@ -33,6 +33,7 @@ export const AppRouter = () => {
     const isChangeUp = [
         "/contactanos",
         "/configuracion",
+        "/signup-success"
     ].includes(location.pathname);
 
     console.log("37 => ",user)
