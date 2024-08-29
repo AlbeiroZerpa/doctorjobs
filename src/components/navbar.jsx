@@ -6,7 +6,9 @@ import logoLight from "../assets/images/logo-light.png";
 import logoWhite from "../assets/images/logo-white.png";
 import userImg from '../assets/images/client/16.jpg';
 
-import { FiSearch, FiUser, FiHelpCircle, FiSettings, FiLogOut } from '../assets/icons/vander';
+import { FiUser, FiLogOut } from '../assets/icons/vander';
+
+import useUserStore from '../store/userStore';
 
 export default function Navbar({ navclass, navlight, manuclass }) {
     const [scrolling, setScrolling] = useState(false);
@@ -17,6 +19,7 @@ export default function Navbar({ navclass, navlight, manuclass }) {
     const dropdownRef = useRef(null);
     const userRef = useRef(null);
     const location = useLocation();
+    const { user, logout } = useUserStore();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -51,6 +54,11 @@ export default function Navbar({ navclass, navlight, manuclass }) {
         setToggle(!isToggle);
     };
 
+    const handleLogout = (e) => {
+        e.preventDefault()
+        logout()
+    }
+
     return (
         <nav id="topnav" className={`${navclass} ${scrolling ? 'nav-sticky' : ''}`}>
             <div className="container relative">
@@ -83,10 +91,12 @@ export default function Navbar({ navclass, navlight, manuclass }) {
                     </div>
                 </div>
 
-
-                <ul className="buy-button list-none mb-0 space-x-1">
-
-
+                {user && (<ul className="buy-button list-none">
+                    <li className="dropdown inline-block relative pe-1">
+                        <p>
+                            0 Pts
+                        </p>
+                    </li>
                     <li className="dropdown inline-block relative ps-0.5" ref={userRef}>
                         <button className="dropdown-toggle items-center" type="button" onClick={() => setUserManu(!userManu)}>
                             <span className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-md border border-red-500 bg-red-500 text-white">
@@ -103,7 +113,7 @@ export default function Navbar({ navclass, navlight, manuclass }) {
                                     </li>
                                     <li className="border-t border-gray-100 dark:border-gray-800 my-2"></li>
                                     <li>
-                                        <Link to="/login" className="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-red-500 dark:hover:text-white">
+                                        <Link to="#" onClick={handleLogout} className="flex items-center font-medium py-2 px-4 dark:text-white/70 hover:text-red-500 dark:hover:text-white">
                                             <FiLogOut className="size-4 me-2"></FiLogOut>Logout
                                         </Link>
                                     </li>
@@ -111,7 +121,7 @@ export default function Navbar({ navclass, navlight, manuclass }) {
                             </div>
                         )}
                     </li>
-                </ul>
+                </ul>)}
 
                 <div id="navigation" style={{ display: isToggle ? 'block' : 'none' }}>
                     <ul className={`navigation-menu ${manuclass}`}>
@@ -127,9 +137,12 @@ export default function Navbar({ navclass, navlight, manuclass }) {
                         <li className={`${location.pathname === '/planes' ? 'active' : ''}`}>
                             <Link to="/planes" className="sub-menu-item">Planes</Link>
                         </li>
-                        <li className={`${location.pathname === '/contact' ? 'active' : ''}`}>
+                        <li className={`${location.pathname === '/contactanos' ? 'active' : ''}`}>
                             <Link to="/contactanos" className="sub-menu-item">Contáctanos</Link>
                         </li>
+                        {!user && (<li className={`${location.pathname === '/login' ? 'active' : ''}`}>
+                            <Link to="/login" className="sub-menu-item">Iniciar / Resgistrar</Link>
+                        </li>)}
                     </ul>
                 </div>
             </div>

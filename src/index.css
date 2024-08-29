@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#topnav .buy-button p{
+  --tw-text-opacity: 1;
+  color: white !important;
+}
+#topnav.nav-sticky .buy-button p{
+  --tw-text-opacity: 1;
+    color: rgb(22 28 45 / var(--tw-text-opacity)) !important;
+}
