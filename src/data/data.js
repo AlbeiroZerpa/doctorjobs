@@ -83,88 +83,85 @@ export const packages = [
     {
         id:1,
         image:listing1,
-        tagText:'10% Off',
-        place:'Dubai',
-        title:'Cuba Sailing Adventure',
+        place:'Guayaquil',
+        title:'CENTRO CLÍNICO QUIRÚRGICO AMBULATORIO HOSPITAL DEL DÍA NORTE TARQUI - IESS',
         amount:'$ 58 / Día'
     },
     {
         id:2,
         image:listing2,
-        place:'Italy',
-        title:'Tour in New York',
+        place:'Guayaquil',
+        title:'CENTRO MÉDICO FAMYSALUD',
         amount:'$ 58 / Día'
     },
     {
         id:3,
         image:listing3,
-        place:'Maldivas',
-        title:'Discover Greece',
+        place:'Guayaquil',
+        title:'CENTRO MEDICO ALBATROS',
         amount:'$ 58 / Día'
     },
     {
         id:4,
         image:listing4,
-        place:'USA',
-        title:'Museum of Modern Art',
+        place:'Guayaquil',
+        title:'CENTRO DE ESPECIALIDADES LETAMENDI',
         amount:'$ 58 / Día'
     },
     {
         id:5,
         image:listing5,
-        place:'Bali',
-        title:'Peek Mountain View',
+        place:'Guayaquil',
+        title:'CENTRO DE ESPECIALIDADES CENTRAL GUAYAS #6 IESS',
         amount:'$ 58 / Día'
     },
     {
         id:6,
         image:listing6,
-        tagText:'25% Off',
-        place:'Bangkok',
-        title:'Hot Baloon Journey',
+        place:'Guayaquil',
+        title:'CENTRO DE ESPECIALIDADES MEDICAS BIENESTAR',
         amount:'$ 58 / Día'
     },
     {
         id:7,
         image:listing7,
-        place:'Singapore',
-        title:'Orca Camp Kayaking Trip',
+        place:'Guayaquil',
+        title:'CENTRO DE ESPECIALIDADES VIRGEN DEL CISNE',
         amount:'$ 58 / Día'
     },
     {
         id:8,
         image:listing8,
-        tagText:'20% Off',
-        place:'Thailand',
-        title:'Caño Cristales River Trip',
+        place:'Guayaquil',
+        title:'SEMEDIC CENTRO DE ESPECIALIDADES',
         amount:'$ 58 / Día'
     },
     {
         id:9,
         image:listing9,
-        place:'Pattaya',
-        title:'Osa Peninsula to Dominical',
+        place:'Guayaquil',
+        title:'CENTRO DE ESPECIALIDADES MÉDICAS SAN JUAN',
         amount:'$ 58 / Día'
     },
     {
         id:10,
         image:listing10,
-        place:'Lakshadweep',
-        title:'History of The Emporer',
+        place:'Guayaquil',
+        title:'CENTRO MÉDICO DE ESPECIALIDADES AUXILIADORA',
         amount:'$ 58 / Día'
     },
     {
         id:11,
         image:listing11,
-        place:'Paris',
-        title:'Wildness of Paris',
+        place:'Guayaquil',
+        title:'CEMAN CENTRO DE ESPECIALIDADES MÉDICAS MANRIQUE',
         amount:'$ 58 / Día'
     },
     {
         id:12,
         image:listing12,
-        place:'London',
-        title:'The Hills and Mountains',
+        place:'Guayaquil',
+        title:'FUNDACIÓN NAHIM ISAÍAS CENTRO MÉDICO DE ESPECIALIDADES',
         amount:'$ 58 / Día'
     },
 ]

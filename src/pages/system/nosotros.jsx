@@ -2,10 +2,8 @@ import React, { useState } from 'react'
 import Navbar from "../../components/navbar";
 import { Link } from "react-router-dom";
 
-import Blogs from '../../components/blogs'
 import Client from '../../components/client'
 import About from '../../components/about'
-import Footer from '../../components/footer';
 import Switcher from '../../components/switcher';
 
 import { teamData,placeImage } from "../../data/data";
@@ -17,6 +15,7 @@ import 'tiny-slider/dist/tiny-slider.css';
 
 import Lightbox from 'react-18-image-lightbox';
 import "react-18-image-lightbox/style.css"
+import Footer from "../../components/footer";
 
 export default function Nosotros(){
     let [isOpen, setisOpen] = useState(false);

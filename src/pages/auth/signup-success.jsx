@@ -14,12 +14,12 @@ export default function SignupSuccess(){
                         <div className="relative overflow-hidden rounded-md bg-white dark:bg-slate-900 shadow dark:shadow-gray-800">
                             <div className="px-6 py-12 bg-emerald-600 text-center">
                                 <i className="mdi mdi-check-circle text-white text-6xl"></i>
-                                <h5 className="text-white text-xl tracking-wide uppercase font-semibold mt-2">Success</h5>
+                                <h5 className="text-white text-xl tracking-wide uppercase font-semibold mt-2">Registro exitoso</h5>
                             </div>
 
                             <div className="px-6 py-12 text-center">
                                 <p className="text-black font-semibold text-xl dark:text-white">Felicidades! 🎉</p> 
-                                <p className="text-slate-400 mt-4"> Su cuenta ha sido creada exitosamente. <br/>Disfruta tu viaje. Gracias</p>
+                                <p className="text-slate-400 mt-4"> Su cuenta ha sido creada exitosamente. <br/>Estamos emocionados de tenerte con nosotros.</p>
                                 
                                 <div className="mt-6">
                                     <Link to="/" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md">Continuar</Link>
@@ -27,7 +27,7 @@ export default function SignupSuccess(){
                             </div>
 
                             <div className="text-center p-6 border-t border-gray-100 dark:border-gray-700">
-                                <p className="mb-0 text-slate-400">© {new Date().getFullYear()} Travosy. Design & Develop with <i className="mdi mdi-heart text-red-600"></i> by <Link to="https://shreethemes.in/" target="_blank" className="text-reset">Shreethemes</Link>.</p>
+                            <p className="mb-0 text-slate-400">© {new Date().getFullYear()} Creador por <Link to="https://alucinamkt.com/" target="_blank" className="text-reset">AlucinaMKT</Link>.</p>
                             </div>
                         </div>
                     </div>
