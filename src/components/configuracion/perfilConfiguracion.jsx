@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom"
-import {FiUser, FiUserCheck, FiMail, FiBookmark,FiMessageCircle, FiPhone, FiGlobe,FiKey} from "../../assets/icons/vander"
+import {FiUser, FiUserCheck, FiMail, FiKey} from "../../assets/icons/vander"
 
 export const PerfilConfiguracion = () => {
     return (
