@@ -1,6 +1,6 @@
 import React from "react";
 import { packages } from "../../data/data";
-import { FiEye } from "react-icons/fi";
+import { FiEye, FiSearch } from "react-icons/fi";
 
 export const Mihistorial = () => {
   //Cortar titulos largos
@@ -14,7 +14,29 @@ export const Mihistorial = () => {
     <>
       <div className="lg:w-3/4 md:w-2/3 md:px-1 mt-6 md:mt-0">
         <div className="p-6 rounded-md shadow dark:shadow-gray-800 bg-white dark:bg-slate-900">
-          <h5 className="text-lg font-semibold mb-4">Mi Historial:</h5>
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
+            <div>
+              <h5 className="text-lg font-semibold mb-4">Mi Historial:</h5>
+            </div>
+
+            <div className="relative">
+              <div className="absolute top-5 left-3">
+                <FiSearch></FiSearch>
+              </div>
+              <form>
+                <input
+                  type="text"
+                  className="h-14 w-full pl-10 pr-20 rounded-lg z-0 shadow focus:shadow-red-500 transition duration-300 focus:outline-none"
+                  placeholder="Buscar..."
+                />
+                <div className="absolute top-2 right-2">
+                  <button className="h-10 w-20 text-white rounded-lg bg-red-500 hover:bg-red-600">
+                    Buscar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
           <div className="relative overflow-x-auto shadow dark:shadow-gray-800 rounded-md mt-6">
             <table className="w-full text-center text-slate-500 dark:text-slate-400">
               <thead className="text-sm uppercase bg-slate-50 dark:bg-slate-800">
