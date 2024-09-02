@@ -1,13 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
- 
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+    content: [
+        "./app/**/*.{js,ts,jsx,tsx,mdx}",
+        "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+        "./components/**/*.{js,ts,jsx,tsx,mdx}",
+
+        // Or if using `src` directory:
+        "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    ],
     darkMode: 'class',
     important: true,
     theme: {
@@ -95,12 +95,16 @@ module.exports = {
                 3: '3',
                 999: '999',
             },
+
+            backdropBlur: {
+                md: '10px', // Ajusta el nivel de desenfoque aquí
+            },
         },
     },
 
     plugins: [
         require("@tailwindcss/forms")({
-          strategy: 'class', // only generate classes
+            strategy: 'class', // only generate classes
         }),
     ],
 }

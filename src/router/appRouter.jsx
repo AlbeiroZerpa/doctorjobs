@@ -3,12 +3,13 @@ import { Route, Routes, useLocation } from "react-router-dom";
 
 //importaciones de las landing
 import Index from '../pages/system/index'
-import Nosotros from '../pages/system/nosotros.jsx'
-import Alquileres from "../pages/system/alquileres.jsx";
-import Planes from '../pages/system/planes.jsx'
-import VerificacionPlanes from "../pages/system/verificacionPlanes.jsx";
-import Contactanos from "../pages/system/contactanos.jsx";
-import Configuracion from '../pages/system/configuracion.jsx'
+import Nosotros from '../pages/system/nosotros'
+import Alquileres from "../pages/system/alquileres";
+import Planes from '../pages/system/planes'
+import VerificacionPlanes from "../pages/system/verificacionPlanes";
+import Contactanos from "../pages/system/contactanos";
+import Configuracion from '../pages/system/configuracion'
+import Alquiler from "../pages/system/alquiler";
 import Login from '../pages/auth/login'
 import Signup from '../pages/auth/signup'
 import SignupSuccess from '../pages/auth/signup-success'
@@ -57,6 +58,7 @@ export const AppRouter = () => {
                 <Route path="/contactanos" element={<Contactanos />} />
                 <Route path="/configuracion" element={<Configuracion />} />
                 <Route path="/verificacion-pago-planes" element={<VerificacionPlanes />} />
+                <Route path="/alquiler/:id" element={<Alquiler />} />
 
 
                 <Route path="/login" element={<Login />} />

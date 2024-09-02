@@ -223,7 +223,7 @@ export default function IndexFour() {
                   <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-700 mx-2 mt-2">
                     <img
                       src={item.image}
-                      className="scale-125 group-hover:scale-100 duration-500"
+                      className="scale-125 group-hover:scale-100 duration-500 h-36"
                       alt=""
                     />
                     {item.tagText && (
@@ -249,12 +249,15 @@ export default function IndexFour() {
                       <FiMapPin className="text-red-500 size-4 me-1"></FiMapPin>{" "}
                       {item.place}
                     </p>
-                    <Link
-                      to={`/tour-detail-one/${item.id}`}
-                      className="text-lg font-medium hover:text-red-500 duration-500 ease-in-out"
-                    >
-                      {item.title}
-                    </Link>
+                    <div className="w-full h-12">
+                      <Link
+                        to="/alquiler/16841-16851-68"
+                        className="text-lg font-medium hover:text-red-500 duration-500 ease-in-out line-clamp-2"
+                      >
+                        {item.title}
+                      </Link>
+                    </div>
+
 
                     <div className="flex items-center mt-2">
                       <span className="text-slate-400">Puntuación:</span>
@@ -285,7 +288,7 @@ export default function IndexFour() {
                         {item.amount}
                       </h5>
 
-                      <Link to="" className="text-slate-400 hover:text-red-500">
+                      <Link to="/alquiler/16841-16851-68" className="text-slate-400 hover:text-red-500">
                         Ver Ahora <i className="mdi mdi-arrow-right"></i>
                       </Link>
                     </div>
@@ -343,18 +346,16 @@ export default function IndexFour() {
                       >
                         <button
                           type="button"
-                          className={`flex justify-between items-center p-5 w-full font-medium text-start ${
-                            activeIndex === item.id
-                              ? "bg-gray-50 dark:bg-slate-800 text-red-500"
-                              : ""
-                          }`}
+                          className={`flex justify-between items-center p-5 w-full font-medium text-start ${activeIndex === item.id
+                            ? "bg-gray-50 dark:bg-slate-800 text-red-500"
+                            : ""
+                            }`}
                           onClick={() => setActiveIndex(item.id)}
                         >
                           <span>{item.title}</span>
                           <FiChevronDown
-                            className={`w-4 h-4 shrink-0 ${
-                              activeIndex === item.id ? "rotate-180" : ""
-                            }`}
+                            className={`w-4 h-4 shrink-0 ${activeIndex === item.id ? "rotate-180" : ""
+                              }`}
                           ></FiChevronDown>
                         </button>
                       </h2>

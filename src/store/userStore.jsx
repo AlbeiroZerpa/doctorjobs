@@ -19,6 +19,12 @@ const useUserStore = create(
             ? { ...state.user, puntos: state.user.puntos + nuevosPuntos }
             : null,
         })),
+        removePuntos: (puntosARestar) =>
+          set((state) => ({
+            user: state.user
+              ? { ...state.user, puntos: state.user.puntos - puntosARestar }
+              : null,
+          })),        
     }),
     {
       name: 'user-storage', // Nombre de la clave en localStorage
