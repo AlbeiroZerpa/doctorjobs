@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import Navbar from "../../components/navbar";
 import Filter from "../../components/filter";
-import Footer from "../../components/footer";
 import Switcher from "../../components/switcher";
 
 import { packages } from "../../data/data";

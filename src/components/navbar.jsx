@@ -13,7 +13,7 @@ import useUserStore from '../store/userStore';
 export default function Navbar({ navclass, navlight, manuclass }) {
     const [scrolling, setScrolling] = useState(false);
     const [isToggle, setToggle] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
+    const [, setIsOpen] = useState(false);
     const [userManu, setUserManu] = useState(false);
 
     const dropdownRef = useRef(null);

@@ -49,7 +49,7 @@ export default function Signup() {
 
         setIsLoading(true)
         setTimeout(() => {
-            if (formData.email == "cliente@prueba.com") {
+            if (formData.email === "cliente@prueba.com") {
                 setError("Correo ya existe")
                 setIsLoading(false)
                 return setTimeout(() => {

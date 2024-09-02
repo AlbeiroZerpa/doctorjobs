@@ -1,6 +1,6 @@
 import clientImg from "../assets/images/client/16.jpg"
 
-import {FiAirplay, FiFileText, FiLogOut} from '../assets/icons/vander'
+import {FiAirplay, FiClock, FiFileText, FiHeart, FiLogOut} from '../assets/icons/vander'
 
 export default function AccountingTab({ activeTab, setactiveTab }) {
 
@@ -47,6 +47,27 @@ export default function AccountingTab({ activeTab, setactiveTab }) {
                                 <div className="navbar-link flex items-center py-2 rounded cursor-pointer">
                                     <span className="me-2 mb-0"><FiFileText className="size-4" /></span>
                                     <h6 className="mb-0 font-medium">Verificación</h6>
+                                </div>
+                            </li>
+
+                            <li
+                                className={`navbar-item account-menu ${activeTab === 'favoritos' ? 'active text-red-500' : 'text-slate-400'}`}
+                                onClick={() => setactiveTab('favoritos')}
+                            >
+                                <div className="navbar-link flex items-center py-2 rounded cursor-pointer">
+                                    <span className="me-2 mb-0"><FiHeart className="size-4" /></span>
+                                    <h6 className="mb-0 font-medium">Favoritos</h6>
+                                </div>
+                            </li>
+
+                            
+                            <li
+                                className={`navbar-item account-menu ${activeTab === 'mihistorial' ? 'active text-red-500' : 'text-slate-400'}`}
+                                onClick={() => setactiveTab('mihistorial')}
+                            >
+                                <div className="navbar-link flex items-center py-2 rounded cursor-pointer">
+                                    <span className="me-2 mb-0"><FiClock className="size-4" /></span>
+                                    <h6 className="mb-0 font-medium">Mi Historial</h6>
                                 </div>
                             </li>
 

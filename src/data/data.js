@@ -85,84 +85,96 @@ export const packages = [
         image:listing1,
         place:'Guayaquil',
         title:'CENTRO CLÍNICO QUIRÚRGICO AMBULATORIO HOSPITAL DEL DÍA NORTE TARQUI - IESS',
-        amount:'$ 58 / Día'
+        amount:'58 / Día',
+        type: 'Consultorio',
     },
     {
         id:2,
         image:listing2,
         place:'Guayaquil',
         title:'CENTRO MÉDICO FAMYSALUD',
-        amount:'$ 58 / Día'
+        amount:'58 / Día',
+        type: 'Quirofáno',
     },
     {
         id:3,
         image:listing3,
         place:'Guayaquil',
         title:'CENTRO MEDICO ALBATROS',
-        amount:'$ 58 / Día'
+        amount:'58 / Día',
+        type: 'Reuniones',
     },
     {
         id:4,
         image:listing4,
         place:'Guayaquil',
         title:'CENTRO DE ESPECIALIDADES LETAMENDI',
-        amount:'$ 58 / Día'
+        amount:'58 / Día',
+        type: 'Consultorio',
     },
     {
         id:5,
         image:listing5,
         place:'Guayaquil',
         title:'CENTRO DE ESPECIALIDADES CENTRAL GUAYAS #6 IESS',
-        amount:'$ 58 / Día'
+        amount:'58 / Día',
+        type: 'Quirofáno',
     },
     {
         id:6,
         image:listing6,
         place:'Guayaquil',
         title:'CENTRO DE ESPECIALIDADES MEDICAS BIENESTAR',
-        amount:'$ 58 / Día'
+        amount:'58 / Día',
+        type: 'Reuniones',
     },
     {
         id:7,
         image:listing7,
         place:'Guayaquil',
         title:'CENTRO DE ESPECIALIDADES VIRGEN DEL CISNE',
-        amount:'$ 58 / Día'
+        amount:'58 / Día',
+        type: 'Consultorio',
     },
     {
         id:8,
         image:listing8,
         place:'Guayaquil',
         title:'SEMEDIC CENTRO DE ESPECIALIDADES',
-        amount:'$ 58 / Día'
+        amount:'58 / Día',
+        type: 'Quirofáno',
     },
     {
         id:9,
         image:listing9,
         place:'Guayaquil',
         title:'CENTRO DE ESPECIALIDADES MÉDICAS SAN JUAN',
-        amount:'$ 58 / Día'
+        amount:'58 / Día',
+        type: 'Reuniones',
     },
     {
         id:10,
         image:listing10,
         place:'Guayaquil',
         title:'CENTRO MÉDICO DE ESPECIALIDADES AUXILIADORA',
-        amount:'$ 58 / Día'
+        amount:'58 / Día',
+        type: 'Consultorio',
     },
     {
         id:11,
         image:listing11,
         place:'Guayaquil',
         title:'CEMAN CENTRO DE ESPECIALIDADES MÉDICAS MANRIQUE',
-        amount:'$ 58 / Día'
+        amount:'58 / Día',
+        type: 'Quirofáno',
     },
     {
         id:12,
         image:listing12,
         place:'Guayaquil',
         title:'FUNDACIÓN NAHIM ISAÍAS CENTRO MÉDICO DE ESPECIALIDADES',
-        amount:'$ 58 / Día'
+        amount:'58 / Día',
+        type: 'Reuniones',
     },
 ]
 

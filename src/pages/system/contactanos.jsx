@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 import travel from '../../assets/images/travel-train-station.svg'
 
-import Navbar from "../../components/navbar";
-import Footer from "../../components/footer";
 import Switcher from "../../components/switcher";
 
 import {FiPhone, FiMail,FiMapPin, FiX} from '../../assets/icons/vander'

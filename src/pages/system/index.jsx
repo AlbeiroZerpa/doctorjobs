@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import Footer from "../../components/footer";
+
 import Switcher from "../../components/switcher";
 import Client from "../../components/client";
 
@@ -10,7 +10,6 @@ import bg from "../../assets//images/bg/6.jpg";
 
 import {
   FiVideo,
-  FiSearch,
   FiCalendar,
   FiUsers,
   FiMapPin,
@@ -123,6 +122,7 @@ export default function IndexFour() {
                           className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0 start"
                           selected={startDate}
                           onChange={(date) => setStartDate(date)}
+                          wrapperClassName="w-full"
                         />
                       </div>
                     </div>
@@ -137,6 +137,7 @@ export default function IndexFour() {
                           className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0 start"
                           selected={startDate2}
                           onChange={(date) => setStartDate2(date)}
+                          wrapperClassName="w-full"
                         />
                       </div>
                     </div>
@@ -200,7 +201,6 @@ export default function IndexFour() {
       </div>
 
       <section className="relative md:py-24 py-16">
-
         <div className="container relative md:mt-24 mt-16">
           <div className="grid grid-cols-1 pb-8 text-center">
             <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">
@@ -300,8 +300,7 @@ export default function IndexFour() {
               to="/grid-right-sidebar"
               className="text-slate-400 hover:text-red-500 inline-block"
             >
-              Ver más{" "}
-              <i className="mdi mdi-arrow-right align-middle"></i>
+              Ver más <i className="mdi mdi-arrow-right align-middle"></i>
             </Link>
           </div>
         </div>

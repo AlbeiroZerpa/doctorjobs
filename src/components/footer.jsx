@@ -1,11 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import logoLight from '../assets/images/logo-light.png'
-
-import { footerCompany, footerSocial } from "../data/data";
-import {FiMapPin, FiMail, FiPhone} from '../assets/icons/vander'
-
 export default function Footer(){
     return(
         <footer className="footer bg-dark-footer relative text-gray-200 dark:text-gray-200">    

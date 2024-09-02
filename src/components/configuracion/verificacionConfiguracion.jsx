@@ -189,6 +189,7 @@ export const VerificacionConfiguracion = () => {
                   className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0 start"
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
+                  wrapperClassName="w-full"
                 />
               </div>
             </div>

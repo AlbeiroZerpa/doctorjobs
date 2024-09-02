@@ -1,6 +1,6 @@
 import React from "react";
-import './assets/css/tailwind.css'
-import './assets/css/materialdesignicons.min.css'
+import './assets/css/tailwind.css';
+import './assets/css/materialdesignicons.min.css';
 
 import { AppRouter } from "./router/appRouter.jsx";
 
