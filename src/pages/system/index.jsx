@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-
 import Switcher from "../../components/switcher";
 import Client from "../../components/client";
 
@@ -132,7 +131,7 @@ export default function IndexFour() {
                         Seleccione su fecha:
                       </label>
                       <div className="relative mt-2">
-                        <FiCalendar className="size-[18px] absolute top-[10px] start-3 z-0"></FiCalendar>
+                        <FiCalendar className="size-[18px] absolute top-[10px] start-3 z-50"></FiCalendar>
                         <DatePicker
                           className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0 start"
                           selected={startDate2}
@@ -141,6 +140,7 @@ export default function IndexFour() {
                         />
                       </div>
                     </div>
+
 
                     <div>
                       <label className="form-label font-medium text-slate-900 dark:text-white">
@@ -258,7 +258,6 @@ export default function IndexFour() {
                       </Link>
                     </div>
 
-
                     <div className="flex items-center mt-2">
                       <span className="text-slate-400">Puntuación:</span>
                       <ul className="text-lg font-medium text-amber-400 list-none ms-2">
@@ -288,7 +287,10 @@ export default function IndexFour() {
                         {item.amount}
                       </h5>
 
-                      <Link to="/alquiler/16841-16851-68" className="text-slate-400 hover:text-red-500">
+                      <Link
+                        to="/alquiler/16841-16851-68"
+                        className="text-slate-400 hover:text-red-500"
+                      >
                         Ver Ahora <i className="mdi mdi-arrow-right"></i>
                       </Link>
                     </div>
@@ -346,16 +348,18 @@ export default function IndexFour() {
                       >
                         <button
                           type="button"
-                          className={`flex justify-between items-center p-5 w-full font-medium text-start ${activeIndex === item.id
-                            ? "bg-gray-50 dark:bg-slate-800 text-red-500"
-                            : ""
-                            }`}
+                          className={`flex justify-between items-center p-5 w-full font-medium text-start ${
+                            activeIndex === item.id
+                              ? "bg-gray-50 dark:bg-slate-800 text-red-500"
+                              : ""
+                          }`}
                           onClick={() => setActiveIndex(item.id)}
                         >
                           <span>{item.title}</span>
                           <FiChevronDown
-                            className={`w-4 h-4 shrink-0 ${activeIndex === item.id ? "rotate-180" : ""
-                              }`}
+                            className={`w-4 h-4 shrink-0 ${
+                              activeIndex === item.id ? "rotate-180" : ""
+                            }`}
                           ></FiChevronDown>
                         </button>
                       </h2>

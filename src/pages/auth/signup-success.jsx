@@ -14,7 +14,7 @@ export default function SignupSuccess(){
                         <div className="relative overflow-hidden rounded-md bg-white dark:bg-slate-900 shadow dark:shadow-gray-800">
                             <div className="px-6 py-12 bg-emerald-600 text-center">
                                 <i className="mdi mdi-check-circle text-white text-6xl"></i>
-                                <h5 className="text-white text-xl tracking-wide uppercase font-semibold mt-2">Registro exitoso</h5>
+                                <h5 className="text-white text-xl tracking-wide uppercase font-semibold mt-2">Registro Exitoso</h5>
                             </div>
 
                             <div className="px-6 py-12 text-center">

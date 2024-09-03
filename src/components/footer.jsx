@@ -8,7 +8,7 @@ export default function Footer(){
                 <div className="container relative text-center">
                     <div className="grid grid-cols-1">
                         <div className="text-center">
-                            <p className="mb-0">© {new Date().getFullYear()} Creador por <Link to="https://alucinamkt.com/" target="_blank" className="text-reset">AlucinaMKT</Link>.</p>
+                            <p className="mb-0">© {new Date().getFullYear()} Creado por <Link to="https://alucinamkt.com/" target="_blank" className="text-reset">AlucinaMKT</Link>.</p>
                         </div>
                     </div>
                 </div>
