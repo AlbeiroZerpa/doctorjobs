@@ -13,6 +13,8 @@ import {
   FiUsers,
   FiMapPin,
   FiChevronDown,
+  BsBuildings,
+  LiaStopwatchSolid,
 } from "../../assets/icons/vander";
 
 import ModalVideo from "react-modal-video";
@@ -22,8 +24,10 @@ import { Parallax } from "react-parallax";
 
 import { faqData, packages } from "../../data/data";
 
-import DatePicker from "react-datepicker";
+import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import es from "date-fns/locale/es";
+registerLocale("es", es);
 
 export default function IndexFour() {
   const [startDate, setStartDate] = useState(new Date());
@@ -96,13 +100,13 @@ export default function IndexFour() {
                   <div className="grid grid-cols-1 gap-3">
                     <div>
                       <label className="form-label font-medium text-slate-900 dark:text-white">
-                        Tipo de Espacio
+                        ¿Qué buscas?
                       </label>
                       <div className="relative mt-2">
                         <FiUsers className="size-[18px] absolute top-[10px] start-3"></FiUsers>
                         <select className="form-select w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0">
                           <option disabled defaultValue>
-                            Tipo de Espacio
+                            ¿Qué buscas?
                           </option>
                           <option>Consultorio</option>
                           <option>Quirófano</option>
@@ -113,11 +117,33 @@ export default function IndexFour() {
 
                     <div>
                       <label className="form-label font-medium text-slate-900 dark:text-white">
-                        Seleccione su fecha:
+                        Ciudad
+                      </label>
+                      <div className="relative mt-2">
+                        <BsBuildings className="size-[18px] absolute top-[10px] start-3"></BsBuildings>
+                        <select className="form-select w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0">
+                          <option value="" disabled hidden selected>
+                            Ciudad
+                          </option>
+                          <option>Todas</option>
+                          <option>Guayaquil</option>
+                          <option>Quito</option>
+                          <option>Cuenca</option>
+                          <option>Ambato</option>
+                          <option>Riobamba</option>
+                          <option>Durán</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="form-label font-medium text-slate-900 dark:text-white">
+                        Fecha de Reservación:
                       </label>
                       <div className="relative mt-2">
                         <FiCalendar className="size-[18px] absolute top-[10px] start-3 z-50"></FiCalendar>
                         <DatePicker
+                          locale={es}
                           className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0 start"
                           selected={startDate}
                           onChange={(date) => setStartDate(date)}
@@ -128,19 +154,24 @@ export default function IndexFour() {
 
                     <div>
                       <label className="form-label font-medium text-slate-900 dark:text-white">
-                        Seleccione su fecha:
+                        Hora
                       </label>
                       <div className="relative mt-2">
-                        <FiCalendar className="size-[18px] absolute top-[10px] start-3 z-50"></FiCalendar>
+                        <LiaStopwatchSolid className="size-[18px] absolute top-[10px] start-3 z-50"></LiaStopwatchSolid>
                         <DatePicker
+                          locale={es}
                           className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0 start"
                           selected={startDate2}
                           onChange={(date) => setStartDate2(date)}
                           wrapperClassName="w-full"
+                          showTimeSelect
+                          showTimeSelectOnly
+                          timeIntervals={15}
+                          timeCaption="Hora"
+                          dateFormat="h:mm aa"
                         />
                       </div>
                     </div>
-
 
                     <div>
                       <label className="form-label font-medium text-slate-900 dark:text-white">
