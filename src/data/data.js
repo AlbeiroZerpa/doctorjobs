@@ -18,6 +18,10 @@ import client4 from "../assets/images/client/04.jpg";
 import client5 from "../assets/images/client/05.jpg";
 import client6 from "../assets/images/client/06.jpg";
 import client7 from "../assets/images/client/07.jpg";
+import client8 from "../assets/images/client/08.jpg";
+import client9 from "../assets/images/client/09.jpg";
+import client10 from "../assets/images/client/10.jpg";
+import client11 from "../assets/images/client/11.jpg";
 
 import blog1 from "../assets/images/blog/1.jpg";
 import blog2 from "../assets/images/blog/2.jpg";
@@ -202,39 +206,63 @@ export const packages = [
 export const ClientData = [
   {
     image: client1,
-    desc: '" Desde que empecé a alquilar un consultorio aquí, mis pacientes han comentado lo mucho que les gusta el ambiente acogedor y profesional."',
-    name: "Calvin Carlo",
-    possition: "Dermatólogo",
+    desc: '" Con Doctorjobs, ahora puedo reservar quirófanos y espacios en distintos hospitales sin estar atado a uno solo. Además, me ahorro el estrés de coordinar todo por separado, ya que también puedo contratar el personal necesario y alquilar equipo médico sin buscar por otros lados."',
+    name: "Pedro Méndez",
+    possition: "Cardiólogo, 54 años",
   },
   {
     image: client2,
-    desc: '"El espacio es perfecto para mis sesiones de terapia. Es tranquilo, bien decorado, y mis pacientes siempre se sienten cómodos."',
-    name: "Christa Smith",
-    possition: "Fisioterapeuta",
+    desc: '"No voy a mentir, al principio me costaba adaptarme a la idea de no tener un consultorio fijo. Pero la flexibilidad de poder alquilar por horas me ha dado más libertad para manejar mi tiempo y ver a los pacientes donde les quede más cerca, sin complicaciones de largos traslados."',
+    name: "Lucía Fernández",
+    possition: "Ginecóloga, 48 años",
   },
   {
     image: client3,
-    desc: '" Lo que más me gusta de estos consultorios es la calidad de las instalaciones y el hecho de que todo está listo para usar. "',
-    name: "Jemina CLone",
-    possition: "Psicóloga",
+    desc: '" Alquilar por horas me parecía raro al principio, pero me ha permitido ver a más pacientes en diferentes lugares. No tengo que comprometerme con una sola ubicación, y eso hace que pueda organizar mejor mi agenda y ahorrar en costos fijos. "',
+    name: "Carla López",
+    possition: "Dermatóloga, 32 años",
   },
   {
     image: client4,
-    desc: '" Llevo más de seis meses utilizando estos consultorios y no podría estar más contenta "',
-    name: "Smith Vodka",
-    possition: "Pediatra",
+    desc: '" El hecho de que los quirófanos cuenten con todos los permisos del Ministerio de Salud del Ecuador es clave. Sabes que estás operando en lugares con todas las normativas al día, y eso te da tranquilidad, algo que en esta profesión es esencial. "',
+    name: "Alfonso Ramírez",
+    possition: "Cirujano General, 58 años",
   },
   {
     image: client5,
-    desc: '" Es un placer trabajar en un espacio tan bien cuidado y organizado. Los consultorios están equipados con todo lo necesario."',
-    name: "Cristino Murfi",
-    possition: "Nutrióloga",
+    desc: '" Lo mejor es que si surge algo inesperado, puedo extender mi tiempo en la consulta sin preocuparme por costos extra desproporcionados. La flexibilidad que ofrece Doctorjobs es algo que no conseguí con otros servicios."',
+    name: "Ana Campos",
+    possition: "Pediatra, 35 años",
   },
   {
     image: client6,
-    desc: '" El espacio es cómodo, bien ubicado, y tiene todo lo que necesito para atender a mis pacientes. Además, la flexibilidad de alquiler es ideal para mi práctica." "',
-    name: "Cristino Murfi",
-    possition: "Fisioterapeuta",
+    desc: '" Lo que más valoro es la posibilidad de operar en hospitales diferentes, dependiendo de dónde esté mi paciente. Puedo alquilar equipos, contratar personal médico y todo lo que necesito está en un solo lugar, sin tener que coordinar todo por separado. "',
+    name: "Jorge Suárez",
+    possition: "Urólogo, 50 años",
+  },
+  {
+    image: client8,
+    desc: '"La plataforma es práctica, y eso me ha permitido organizar mi tiempo mucho mejor. Antes tenía que alquilar un consultorio por un mes completo, incluso si no lo usaba todo el tiempo. Con Doctorjobs, solo pago por lo que realmente necesito."',
+    name: "Elena González",
+    possition: "Nutrióloga, 29 años",
+  },
+  {
+    image: client7,
+    desc: '"Antes, organizar una cirugía implicaba coordinar quirófanos, personal y equipos en distintos lugares, lo cual era agotador. Ahora todo lo hago desde un solo sitio, y los quirófanos ya están listos y cumplen con los requisitos de salud."',
+    name: "Juan Pablo Estrada",
+    possition: "Cirujano Plástico, 45 años",
+  },
+  {
+    image: client9,
+    desc: '"Reservar consultorios por horas me ha facilitado atender a más pacientes en diferentes zonas. Lo que más aprecio es que puedo moverme entre ubicaciones sin estar atada a un solo lugar, y eso hace que mis pacientes también se sientan más cómodos."',
+    name: "Laura Ortiz",
+    possition: "Psicóloga, 27 años",
+  },
+  {
+    image: client10,
+    desc: '"Lo bueno de Doctorjobs es que puedo operar de forma flexible y planear mi jornada dependiendo de las necesidades de mis pacientes. Además, la opción de extender mis horas de trabajo y obtener descuentos es un gran beneficio que otros sistemas no ofrecen."',
+    name: "Luis Gutiérrez",
+    possition: "Neurólogo, 60 años",
   },
 ];
 
@@ -391,29 +419,53 @@ export const placeImage = [
 export const faqData = [
   {
     id: 1,
-    title: "¿Qué servicios están incluidos en el alquiler de los consultorios?",
-    desc: "Nuestros consultorios vienen completamente equipados con mobiliario, aire acondicionado, y acceso a internet.",
+    title: "¿Qué servicios están incluidos en el alquiler de consultorios y quirófanos?",
+    desc: "Nuestros espacios incluyen consultorios y quirófanos completamente funcionales, equipados según tus necesidades. Dependiendo del lugar que elijas, podrás acceder a opciones básicas o avanzadas, con comodidades como mobiliario, aire acondicionado, conexión a internet y más. Además, tienes la posibilidad de alquilar equipos médicos adicionales o contratar personal especializado según el tipo de servicio que desees ofrecer.",
   },
   {
     id: 2,
-    title: "¿Puedo alquilar un consultorio por horas o días específicos?",
-    desc: "Sí, ofrecemos opciones de alquiler flexibles. Puedes alquilar un consultorio por horas, medio día, días completos, o incluso semanas, según tus necesidades.",
+    title: "¿Puedo alquilar un consultorio o quirófano por horas o días específicos?",
+    desc: "Sí, puedes alquilar tanto consultorios como quirófanos por el tiempo que necesites, ya sea por horas o por días completos. Esto te permite planificar mejor tu agenda y optimizar costos, utilizando el espacio solo cuando lo requieras para tus consultas, cirugías o reuniones médicas.",
   },
   {
     id: 3,
-    title: "¿Cuál es el proceso para reservar un consultorio?",
-    desc: "Es muy sencillo. Puedes contactarnos a través de nuestro formulario de contacto en la página web o llamarnos directamente.",
+    title: "¿Puedo solicitar equipos médicos o personal adicional cuando alquilo un espacio?",
+    desc: "Absolutamente. Nuestra plataforma te permite, además de alquilar el espacio, solicitar equipos médicos especializados o personal de apoyo como enfermeros o asistentes quirúrgicos. Esto garantiza que tengas todo lo que necesitas para atender a tus pacientes de manera eficiente, sin importar si es para una consulta o una intervención quirúrgica.",
   },
   {
     id: 4,
-    title: "¿Hay estacionamiento disponible para los pacientes?",
-    desc: "Sí, contamos con estacionamiento disponible para los pacientes, lo que facilita el acceso y comodidad para quienes visitan nuestros consultorios.",
+    title: "¿Cuál es el proceso para reservar un consultorio o quirófano?",
+    desc: "Reservar un espacio es fácil. Simplemente elige el consultorio o quirófano que más se ajuste a tus necesidades, selecciona el día y la hora, y confirma la reserva. Si necesitas equipos adicionales o personal médico, puedes agregarlos durante el proceso de reserva. Una vez confirmada, recibirás todos los detalles de la reserva en tu correo electrónico.",
   },
   {
     id: 5,
     title:
-      "¿Qué medidas de seguridad e higiene se implementan en los consultorios?",
-    desc: "Nos tomamos la seguridad y la higiene muy en serio. Todos los consultorios se limpian y desinfectan diariamente.",
+      "¿Hay estacionamiento disponible para mis pacientes?",
+    desc: "La mayoría de nuestros consultorios y quirófanos cuentan con estacionamiento para pacientes. Te recomendamos verificar la disponibilidad de este servicio al momento de hacer tu reserva para asegurarte de que tus pacientes tengan la mejor experiencia posible.",
+  },
+  {
+    id: 6,
+    title:
+      "¿Qué medidas de seguridad e higiene se implementan en los consultorios y quirófanos?",
+    desc: "Todos nuestros espacios cumplen con las normativas vigentes del Ministerio de Salud Pública de Ecuador, garantizando que tanto los consultorios como los quirófanos se mantengan bajo estrictos protocolos de higiene y seguridad. Además, se realizan desinfecciones frecuentes y el equipamiento es esterilizado después de cada uso.",
+  },
+  {
+    id: 7,
+    title:
+      "¿Puedo elegir el tipo de consultorio o quirófano según mi presupuesto?",
+    desc: "Sí, puedes elegir entre una variedad de consultorios y quirófanos que se ajusten a tu presupuesto. Ya sea que busques un espacio más sencillo o uno completamente equipado con tecnología avanzada, tenemos opciones para todas las necesidades y presupuestos.",
+  },
+  {
+    id: 8,
+    title:
+      "¿Qué sucede si necesito cancelar o modificar una reserva?",
+    desc: "Entendemos que las circunstancias pueden cambiar, por lo que puedes modificar o cancelar tu reserva bajo ciertas condiciones. Las políticas de cancelación pueden variar dependiendo del espacio reservado, por lo que te recomendamos revisar los términos al hacer la reserva.",
+  },
+  {
+    id: 9,
+    title:
+      "¿Cómo puedo asegurarme de que el equipo o personal solicitado estará disponible?",
+    desc: "Nuestra plataforma garantiza la disponibilidad de equipos y personal médico en el momento de la reserva. Te confirmaremos la disponibilidad inmediatamente y nos aseguraremos de que todo esté listo para cuando lo necesites.",
   },
 ];
 
