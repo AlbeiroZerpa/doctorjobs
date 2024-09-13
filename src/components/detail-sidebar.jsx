@@ -30,16 +30,13 @@ export default function DetailSidebar() {
   const navigate = useNavigate();
   const [startDate, setStartDate] = useState(new Date());
   const [startDate2, setStartDate2] = useState(new Date());
+  const [inputPacientes, setinputPacientes] = useState();
   const [excludeTimes, setExcludeTimes] = useState([
     new Date().setHours(16, 0, 0, 0), // 4:00 PM
   ]);
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenPassed, setIsOpenPassed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [pacientes, setPacientes] = useState(0);
-  const [horasReserva, setHorasReserva] = useState(0);
-  const [auxiliares, setAuxiliares] = useState(0);
-  const [enfermeros, setEnfermeros] = useState(0);
   const [price, setPrice] = useState(0);
 
   const handleTimeChange = (time) => {
@@ -48,37 +45,6 @@ export default function DetailSidebar() {
     updatedDate.setMinutes(time.getMinutes());
     setStartDate(updatedDate);
   };
-
-  const inputPacientes = (e) => {
-    setPacientes(Number(e.target.value));
-  };
-
-  const inputHorasReservas = (e) => {
-    setHorasReserva(Number(e.target.value));
-  };
-
-  const inputAuxiliares = (e) => {
-    e.target.value === "No"
-      ? setAuxiliares(0)
-      : setAuxiliares(Number(e.target.value));
-  };
-
-  const inputEnfemeros = (e) => {
-    e.target.value === "No"
-      ? setEnfermeros(0)
-      : setEnfermeros(Number(e.target.value));
-  };
-
-  useEffect(() => {
-    const precioBase = 550; //aca se debe colocar cada precio base desde el backed
-    const precioEnfermero = 50; // precio del enfermero
-    const precioAuxiliar = 20; // precio del auxiliar
-    setPrice(
-      precioBase * horasReserva +
-        enfermeros * precioEnfermero +
-        auxiliares * precioAuxiliar
-    );
-  }, [horasReserva, auxiliares, enfermeros]);
 
   const handleAlquilar = () => {
     setIsLoading(true);
@@ -131,22 +97,22 @@ export default function DetailSidebar() {
             </div>
           </div>
           <label className="font-semibold mt-3">Hora Final:</label>
-            <div className="relative mt-2">
-              <FiClock className="size-[18px] absolute top-[10px] start-3 z-50" />
-              <DatePicker
-                locale={es}
-                className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-300 dark:border-gray-800 focus:ring-0 start"
-                selected={startDate2}
-                onChange={handleTimeChange}
-                showTimeSelect
-                showTimeSelectOnly
-                wrapperClassName="w-full"
-                timeIntervals={60}
-                excludeTimes={excludeTimes.map((time) => new Date(time))}
-                timeCaption="Hora"
-                dateFormat="h:mm aa"
-              />
-            </div>
+          <div className="relative mt-2">
+            <FiClock className="size-[18px] absolute top-[10px] start-3 z-50" />
+            <DatePicker
+              locale={es}
+              className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-300 dark:border-gray-800 focus:ring-0 start"
+              selected={startDate2}
+              onChange={handleTimeChange}
+              showTimeSelect
+              showTimeSelectOnly
+              wrapperClassName="w-full"
+              timeIntervals={60}
+              excludeTimes={excludeTimes.map((time) => new Date(time))}
+              timeCaption="Hora"
+              dateFormat="h:mm aa"
+            />
+          </div>
           <div className="mt-4">
             <form>
               <div className="md:flex">
@@ -162,57 +128,9 @@ export default function DetailSidebar() {
                       placeholder="Nu. de pacientes:"
                       id="Noperson"
                       name="number"
-                      value={pacientes}
+                      value={inputPacientes}
                       onChange={inputPacientes}
                     />
-                  </div>
-                </div>
-              </div>
-              <div className="md:flex mt-4">
-                <div className="md:w-1/3">
-                  <span className="font-medium">¿Necesita Auxiliares?</span>
-                </div>
-                <div className="md:w-2/3 mt-4 md:mt-0">
-                  <div className="form-icon relative">
-                    <FiUsers className="w-4 h-4 absolute top-3 start-4"></FiUsers>
-                    <select
-                      className="form-select w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-300 dark:border-gray-800 focus:ring-0"
-                      onChange={inputAuxiliares}
-                    >
-                      <option value="" disabled hidden selected>
-                        No
-                      </option>
-                      <option>No</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div className="md:flex mt-4">
-                <div className="md:w-1/3">
-                  <span className="font-medium">¿Necesita Enfermeros?</span>
-                </div>
-                <div className="md:w-2/3 mt-4 md:mt-0">
-                  <div className="form-icon relative">
-                    <FiUsers className="w-4 h-4 absolute top-3 start-4"></FiUsers>
-                    <select
-                      className="form-select w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-300 dark:border-gray-800 focus:ring-0"
-                      onChange={inputEnfemeros}
-                    >
-                      <option value="" disabled hidden selected>
-                        No
-                      </option>
-                      <option>No</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
                   </div>
                 </div>
               </div>
@@ -220,6 +138,28 @@ export default function DetailSidebar() {
                 <span className="font-medium text-end text-4xl">
                   {price} Créditos
                 </span>
+              </div>
+              <div className="md:flex w-full mt-4">
+                <label class="inline-flex items-center mt-3">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox h-5 w-5 text-red-600"
+                  />
+                  <span class="ml-2 text-gray-700 text-sm">
+                    Acepto Términos y Condiciones de Uso
+                  </span>
+                </label>
+              </div>
+              <div className="md:flex w-full mt-4">
+                <label class="inline-flex items-center mt-3">
+                  <input
+                    type="checkbox"
+                    class="form-checkbox h-5 w-5 text-red-600"
+                  />
+                  <span class="ml-2 text-gray-700 text-sm">
+                    Acepto Términos de Privacidad
+                  </span>
+                </label>
               </div>
             </form>
           </div>

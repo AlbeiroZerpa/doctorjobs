@@ -9,15 +9,25 @@ import image4 from "../../assets/images/listing/4.jpg";
 import DetailSidebar from "../../components/detail-sidebar";
 import Switcher from "../../components/switcher";
 
-import { FiCamera, FiChevronUp, FiMapPin } from "../../assets/icons/vander";
+import {
+  FiCamera,
+  FiMapPin,
+  FiLink,
+  FiMail,
+  FiPhone,
+  FiUser,
+  FiUsers,
+} from "../../assets/icons/vander";
 
 import Lightbox from "react-18-image-lightbox";
 import "react-18-image-lightbox/style.css";
 
-import { faqData, packages, tourDetailAbout } from "../../data/data";
+import { packages, tourDetailAbout } from "../../data/data";
 
 export default function Alquiler() {
   let [activeTab, setActiveTab] = useState(1);
+  const [auxiliares, setAuxiliares] = useState(0);
+  const [enfermeros, setEnfermeros] = useState(0);
 
   let images = [image1, image2, image3, image4];
   let [photoIndex, setActiveIndex] = useState(0);
@@ -31,6 +41,18 @@ export default function Alquiler() {
   let id = params.id;
   let data = packages.find((item) => item.id === parseInt(id));
 
+  const inputAuxiliares = (e) => {
+    e.target.value === "No"
+      ? setAuxiliares(0)
+      : setAuxiliares(Number(e.target.value));
+  };
+
+  const inputEnfemeros = (e) => {
+    e.target.value === "No"
+      ? setEnfermeros(0)
+      : setEnfermeros(Number(e.target.value));
+  };
+
   return (
     <>
       <section className="relative table w-full items-center py-24 bg-[url('../../assets/images/bg/cta.jpg')] bg-top bg-no-repeat bg-cover">
@@ -38,9 +60,7 @@ export default function Alquiler() {
         <div className="container relative">
           <div className="grid grid-cols-1 pb-8 text-center mt-10">
             <h3 className="text-3xl leading-normal tracking-wider font-semibold text-white">
-              {data?.title
-                ? data.title
-                : `Consultorio #02: "Clínica Pasteur`}
+              {data?.title ? data.title : `Consultorio #02: "Clínica Pasteur`}
             </h3>
           </div>
         </div>
@@ -148,11 +168,11 @@ export default function Alquiler() {
                 </div>
               </div>
 
-              <h5 className="text-2xl font-semibold mt-5">550 Créditos / Hora</h5>
               <h5 className="text-2xl font-semibold mt-5">
-                {data?.title
-                  ? data.title
-                  : "Consultorio #02: Clínica Pasteur"}
+                550 Créditos / Hora
+              </h5>
+              <h5 className="text-2xl font-semibold mt-5">
+                {data?.title ? data.title : "Consultorio #02: Clínica Pasteur"}
               </h5>
               <p className="flex items-center text-slate-400 font-medium mt-2">
                 <FiMapPin className="size-4 me-1"></FiMapPin>{" "}
@@ -199,8 +219,55 @@ export default function Alquiler() {
                   bien equipada, asegurando que tus pacientes tengan una
                   experiencia agradable desde el momento en que llegan.
                 </p>
+                <div className="md:flex mt-4">
+                  <div className="md:w-1/3">
+                    <span className="font-medium">¿Necesita Auxiliares?</span>
+                  </div>
+                  <div className="md:w-2/3 mt-4 md:mt-0">
+                    <div className="form-icon relative">
+                      <FiUsers className="w-4 h-4 absolute top-3 start-4"></FiUsers>
+                      <select
+                        className="form-select w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-300 dark:border-gray-800 focus:ring-0"
+                        onChange={inputAuxiliares}
+                      >
+                        <option value="" disabled hidden selected>
+                          No
+                        </option>
+                        <option>No</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div className="md:flex mt-4">
+                  <div className="md:w-1/3">
+                    <span className="font-medium">¿Necesita Enfermeros?</span>
+                  </div>
+                  <div className="md:w-2/3 mt-4 md:mt-0">
+                    <div className="form-icon relative">
+                      <FiUsers className="w-4 h-4 absolute top-3 start-4"></FiUsers>
+                      <select
+                        className="form-select w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-300 dark:border-gray-800 focus:ring-0"
+                        onChange={inputEnfemeros}
+                      >
+                        <option value="" disabled hidden selected>
+                          No
+                        </option>
+                        <option>No</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
               </div>
-
               {/* <div className="mt-6">
                             <h5 className="text-lg font-semibold">Leave A Comment:</h5>
 
