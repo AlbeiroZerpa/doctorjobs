@@ -80,24 +80,6 @@ export default function DetailSidebar() {
     );
   }, [horasReserva, auxiliares, enfermeros]);
 
-  const reservarPrueba = () => {
-    const startHour = new Date(startDate);
-    startHour.setMinutes(0, 0, 0);
-
-    const newExcludeTimes = [];
-    for (let i = 0; i < horasReserva; i++) {
-      const newHour = new Date(startHour);
-      newHour.setHours(startHour.getHours() + i);
-      newExcludeTimes.push(newHour.getTime());
-    }
-
-    setExcludeTimes((prevTimes) => [...prevTimes, ...newExcludeTimes]);
-    setPacientes(0);
-    setHorasReserva(0);
-    setAuxiliares(0);
-    setEnfermeros(0);
-  };
-
   const handleAlquilar = () => {
     setIsLoading(true);
 
@@ -116,14 +98,14 @@ export default function DetailSidebar() {
   return (
     <>
       <div className="lg:col-span-4 md:col-span-5">
-        <div className="p-4 rounded-md shadow dark:shadow-gray-700 sticky top-20">
+        <div className="p-4 rounded-md shadow-xl dark:shadow-gray-700 sticky top-20">
           <div className="flex flex-col">
             <label className="font-semibold">Fecha:</label>
             <div className="relative mt-2">
               <FiCalendar className="size-[18px] absolute top-[10px] start-3 z-50" />
               <DatePicker
                 locale={es}
-                className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0 start"
+                className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-300 dark:border-gray-800 focus:ring-0 start"
                 selected={startDate}
                 onChange={(date) => setStartDate(date)}
                 wrapperClassName="w-full"
@@ -135,7 +117,7 @@ export default function DetailSidebar() {
               <FiClock className="size-[18px] absolute top-[10px] start-3 z-50" />
               <DatePicker
                 locale={es}
-                className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0 start"
+                className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-300 dark:border-gray-800 focus:ring-0 start"
                 selected={startDate}
                 onChange={handleTimeChange}
                 showTimeSelect
@@ -153,7 +135,7 @@ export default function DetailSidebar() {
               <FiClock className="size-[18px] absolute top-[10px] start-3 z-50" />
               <DatePicker
                 locale={es}
-                className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0 start"
+                className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-300 dark:border-gray-800 focus:ring-0 start"
                 selected={startDate2}
                 onChange={handleTimeChange}
                 showTimeSelect
@@ -194,7 +176,7 @@ export default function DetailSidebar() {
                   <div className="form-icon relative">
                     <FiUsers className="w-4 h-4 absolute top-3 start-4"></FiUsers>
                     <select
-                      className="form-select w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0"
+                      className="form-select w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-300 dark:border-gray-800 focus:ring-0"
                       onChange={inputAuxiliares}
                     >
                       <option value="" disabled hidden selected>
@@ -218,7 +200,7 @@ export default function DetailSidebar() {
                   <div className="form-icon relative">
                     <FiUsers className="w-4 h-4 absolute top-3 start-4"></FiUsers>
                     <select
-                      className="form-select w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0"
+                      className="form-select w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-300 dark:border-gray-800 focus:ring-0"
                       onChange={inputEnfemeros}
                     >
                       <option value="" disabled hidden selected>
@@ -241,13 +223,6 @@ export default function DetailSidebar() {
               </div>
             </form>
           </div>
-
-          <button
-            onClick={reservarPrueba}
-            className="py-2 px-5 mt-8 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md w-full"
-          >
-            Prueba
-          </button>
 
           <div className="mt-4">
             <button

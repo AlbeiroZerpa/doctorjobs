@@ -78,7 +78,7 @@ export default function Nosotros(){
     return(
         <>
         <Navbar navclass="defaultscroll is-sticky" navlight={true} manuclass="justify-end nav-light"/>
-        <section className="relative table w-full items-center py-36 bg-[url('../../assets/images/bg/cta.jpg')] bg-top bg-no-repeat bg-cover">
+        <section className="relative table w-full items-center py-24 bg-[url('../../assets/images/bg/cta.jpg')] bg-top bg-no-repeat bg-cover">
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900"></div>
             <div className="container relative">
                 <div className="grid grid-cols-1 pb-8 text-center mt-10">
@@ -100,9 +100,9 @@ export default function Nosotros(){
 
             <div className="container relative md:mt-24 mt-16">
                 <div className="grid grid-cols-1 pb-6 text-center">
-                    <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Nosotros</h3>
+                    <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Equipo Médico y Profesional</h3>
 
-                    <p className="text-slate-400 max-w-xl mx-auto">Te Ubicamos en un espacio moderno y acogedor, nuestros consultorios están diseñados para ofrecer a los profesionales de la salud un ambiente tranquilo y profesional.</p>
+                    <p className="text-slate-400 max-w-xl mx-auto">El equipo está compuesto por expertos en tecnología, atención al cliente, y logística, quienes trabajan mano a mano para que los profesionales de la salud encuentren el espacio ideal para sus consultas, cirugías o reuniones. Cada miembro de nuestro equipo está dedicado a brindar un servicio excepcional, asegurando una experiencia fluida y sin complicaciones para nuestros usuarios.</p>
                 </div>
 
                 <div className="grid md:grid-cols-12 grid-cols-1 mt-8 gap-[30px]">

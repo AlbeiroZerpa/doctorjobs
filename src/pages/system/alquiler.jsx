@@ -33,7 +33,7 @@ export default function Alquiler() {
 
   return (
     <>
-      <section className="relative table w-full items-center py-36 bg-[url('../../assets/images/bg/cta.jpg')] bg-top bg-no-repeat bg-cover">
+      <section className="relative table w-full items-center py-24 bg-[url('../../assets/images/bg/cta.jpg')] bg-top bg-no-repeat bg-cover">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900"></div>
         <div className="container relative">
           <div className="grid grid-cols-1 pb-8 text-center mt-10">
@@ -152,7 +152,7 @@ export default function Alquiler() {
               <h5 className="text-2xl font-semibold mt-5">
                 {data?.title
                   ? data.title
-                  : "Consultorio #02:<br> Clínica Pasteur"}
+                  : "Consultorio #02: Clínica Pasteur"}
               </h5>
               <p className="flex items-center text-slate-400 font-medium mt-2">
                 <FiMapPin className="size-4 me-1"></FiMapPin>{" "}
