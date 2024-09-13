@@ -32,10 +32,9 @@ module.exports = {
         },
 
         fontFamily: {
-            'dm_sans': ['"DM Sans", sans-serif'],
-            'dancing': ['"Dancing Script", cursive'],
+            'poppins': ['"Poppins"', 'sans-serif'], // Agregar Poppins correctamente
+            'dancing': ['"Dancing Script"', 'cursive'],
         },
-
 
         extend: {
             screens: {

@@ -29,6 +29,7 @@ export default function DetailSidebar() {
   const { user, removePuntos } = useUserStore();
   const navigate = useNavigate();
   const [startDate, setStartDate] = useState(new Date());
+  const [startDate2, setStartDate2] = useState(new Date());
   const [excludeTimes, setExcludeTimes] = useState([
     new Date().setHours(16, 0, 0, 0), // 4:00 PM
   ]);
@@ -129,7 +130,7 @@ export default function DetailSidebar() {
                 dateFormat="MMMM d, yyyy"
               />
             </div>
-
+            <label className="font-semibold mt-2">Hora Inicial:</label>
             <div className="relative mt-2">
               <FiClock className="size-[18px] absolute top-[10px] start-3 z-50" />
               <DatePicker
@@ -147,6 +148,23 @@ export default function DetailSidebar() {
               />
             </div>
           </div>
+          <label className="font-semibold mt-3">Hora Final:</label>
+            <div className="relative mt-2">
+              <FiClock className="size-[18px] absolute top-[10px] start-3 z-50" />
+              <DatePicker
+                locale={es}
+                className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0 start"
+                selected={startDate2}
+                onChange={handleTimeChange}
+                showTimeSelect
+                showTimeSelectOnly
+                wrapperClassName="w-full"
+                timeIntervals={60}
+                excludeTimes={excludeTimes.map((time) => new Date(time))}
+                timeCaption="Hora"
+                dateFormat="h:mm aa"
+              />
+            </div>
           <div className="mt-4">
             <form>
               <div className="md:flex">
@@ -164,25 +182,6 @@ export default function DetailSidebar() {
                       name="number"
                       value={pacientes}
                       onChange={inputPacientes}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="md:flex mt-4">
-                <div className="md:w-1/3">
-                  <span className="font-medium">Horas de reserva:</span>
-                </div>
-                <div className="md:w-2/3 mt-4 md:mt-0">
-                  <div className="form-icon relative">
-                    <FiUsers className="w-4 h-4 absolute top-3 start-4"></FiUsers>
-                    <input
-                      type="number"
-                      className="w-full ps-12 py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0"
-                      placeholder="Horas de reserva:"
-                      id="hreserva"
-                      name="number"
-                      value={horasReserva}
-                      onChange={inputHorasReservas}
                     />
                   </div>
                 </div>

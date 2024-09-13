@@ -52,42 +52,29 @@ export default function IndexFour() {
         <div className="container relative">
           <div className="grid lg:grid-cols-12 md:grid-cols-2 mt-10 items-center gap-6">
             <div className="lg:col-span-7">
-              <h5 className="text-3xl font-dancing text-white">
-                Encuentra tu espacio ideal
-              </h5>
-              <h4 className="font-bold text-white lg:leading-normal leading-normal text-4xl lg:text-6xl mb-6 mt-5">
-                ¿Consultas
-                <br />
-                Médicas?
+              <h4 className="font-bold text-white lg:leading-normal leading-normal text-4xl lg:text-2xl mb-6 mt-5">
+                ¿Necesitas un Quirófano, <br></br>{" "}
+                <i>Consultorio o Sala de Reunión? </i>{" "}
+                <h4 className="font-bold text-white lg:leading-normal leading-normal text-4xl lg:text-5xl mb-6 mt-5">
+                  <i>Tenemos el Espacio Ideal</i>
+                </h4>
               </h4>
               <p className="text-white/70 text-xl max-w-xl">
-                ¿Estás planeando una consulta? ¡Organizaremos tu espacio con el
-                mejor equipamiento y dentro del mejor presupuesto!
+                Reserva tu espacio médico de calidad en cualquier centro del
+                país, equipado con la mejor tecnología y adaptado a tu
+                presupuesto.
               </p>
 
               <div className="mt-6">
                 <Link
                   to=""
-                  className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md"
+                  className="py-2 px-5 inline-flex items-center tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md"
                 >
-                  Ver Paquetes
-                </Link>
-                <Link
-                  to="#!"
-                  onClick={() => setOpen(true)}
-                  className="size-10 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full border border-red-500 bg-red-500 text-white ms-1 lightbox"
-                >
-                  <FiVideo className="h-4 w-4"></FiVideo>
+                  Ver Tutorial
+                  <FiVideo className="ml-2"></FiVideo>
                 </Link>
                 <span className="font-semibold ms-1 align-middle"></span>
               </div>
-              <ModalVideo
-                channel="youtube"
-                youtube={{ mute: 0, autoplay: 0 }}
-                isOpen={isOpen}
-                videoId="S_CGed6E610"
-                onClose={() => setOpen(false)}
-              />
             </div>
 
             <div className="lg:col-span-5">
@@ -152,46 +139,6 @@ export default function IndexFour() {
                       </div>
                     </div>
 
-                    <div>
-                      <label className="form-label font-medium text-slate-900 dark:text-white">
-                        Hora
-                      </label>
-                      <div className="relative mt-2">
-                        <LiaStopwatchSolid className="size-[18px] absolute top-[10px] start-3 z-50"></LiaStopwatchSolid>
-                        <DatePicker
-                          locale={es}
-                          className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0 start"
-                          selected={startDate2}
-                          onChange={(date) => setStartDate2(date)}
-                          wrapperClassName="w-full"
-                          showTimeSelect
-                          showTimeSelectOnly
-                          timeIntervals={15}
-                          timeCaption="Hora"
-                          dateFormat="h:mm aa"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="form-label font-medium text-slate-900 dark:text-white">
-                        Número de Personas
-                      </label>
-                      <div className="relative mt-2">
-                        <FiUsers className="size-[18px] absolute top-[10px] start-3"></FiUsers>
-                        <select className="form-select w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0">
-                          <option disabled defaultValue>
-                            Número de Personas
-                          </option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
-                      </div>
-                    </div>
-
                     <div className="">
                       <input
                         type="submit"
@@ -235,12 +182,11 @@ export default function IndexFour() {
         <div className="container relative md:mt-24 mt-16">
           <div className="grid grid-cols-1 pb-8 text-center">
             <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">
-              Paquetes de Consultorios
+            Alquiler de Consultorios, Quirófanos y Salas de Reunión
             </h3>
 
             <p className="text-slate-400 max-w-xl mx-auto">
-              ¿Estás planeando una consulta? ¡Organizaremos tu espacio con el
-              mejor equipamiento y dentro del mejor presupuesto!
+            Accede a consultorios equipados, quirófanos para tus operaciones o salas de reuniones médicas, todo por el tiempo que necesites y sin complicaciones. Optimiza recursos, trabaja de forma flexible y maximiza tus ingresos
             </p>
           </div>
 

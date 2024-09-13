@@ -21,6 +21,7 @@ import Navbar from "../components/navbar.jsx";
 import Footer from "../components/footer.jsx";
 
 import useUserStore from '../store/userStore.jsx'
+import Checkout from "../pages/system/checkout.jsx";
 
 export const AppRouter = () => {
 
@@ -59,7 +60,7 @@ export const AppRouter = () => {
                 <Route path="/configuracion" element={<Configuracion />} />
                 <Route path="/verificacion-pago-planes" element={<VerificacionPlanes />} />
                 <Route path="/alquiler/:id" element={<Alquiler />} />
-
+                <Route path="/checkout" element={<Checkout />} />
 
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
