@@ -182,11 +182,14 @@ export default function IndexFour() {
         <div className="container relative md:mt-24 mt-16">
           <div className="grid grid-cols-1 pb-8 text-center">
             <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">
-            Alquiler de Consultorios, Quirófanos y Salas de Reunión
+              Alquiler de Consultorios, Quirófanos y Salas de Reunión
             </h3>
 
             <p className="text-slate-400 max-w-xl mx-auto">
-            Accede a consultorios equipados, quirófanos para tus operaciones o salas de reuniones médicas, todo por el tiempo que necesites y sin complicaciones. Optimiza recursos, trabaja de forma flexible y maximiza tus ingresos
+              Accede a consultorios equipados, quirófanos para tus operaciones o
+              salas de reuniones médicas, todo por el tiempo que necesites y sin
+              complicaciones. Optimiza recursos, trabaja de forma flexible y
+              maximiza tus ingresos
             </p>
           </div>
 
@@ -303,15 +306,7 @@ export default function IndexFour() {
           </div>
 
           <div className="relative grid md:grid-cols-12 grid-cols-1 items-center mt-6 gap-6">
-            <div className="md:col-span-6">
-              <img
-                src={faqImg}
-                className="w-full h-[540px] object-cover rounded-md shadow dark:shadow-gray-800"
-                alt=""
-              />
-            </div>
-
-            <div className="md:col-span-6">
+            <div className="md:col-span-12">
               <div>
                 {faqData.map((item, index) => {
                   return (

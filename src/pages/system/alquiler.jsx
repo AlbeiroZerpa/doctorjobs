@@ -9,15 +9,7 @@ import image4 from "../../assets/images/listing/4.jpg";
 import DetailSidebar from "../../components/detail-sidebar";
 import Switcher from "../../components/switcher";
 
-import {
-  FiCamera,
-  FiMapPin,
-  FiLink,
-  FiMail,
-  FiPhone,
-  FiUser,
-  FiUsers,
-} from "../../assets/icons/vander";
+import { FiCamera, FiMapPin, FiUsers } from "../../assets/icons/vander";
 
 import Lightbox from "react-18-image-lightbox";
 import "react-18-image-lightbox/style.css";
@@ -268,37 +260,25 @@ export default function Alquiler() {
                   </div>
                 </div>
               </div>
-              {/* <div className="mt-6">
-                            <h5 className="text-lg font-semibold">Leave A Comment:</h5>
-
-                            <form className="mt-6">
-                                <div className="grid lg:grid-cols-12 lg:gap-6">
-                                    <div className="lg:col-span-6 mb-5">
-                                        <div className="text-left">
-                                            <label htmlFor="name" className="font-semibold">Your Name:</label>
-                                            <input name="name" id="name" type="text" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Name :"/>
-                                        </div>
-                                    </div>
-    
-                                    <div className="lg:col-span-6 mb-5">
-                                        <div className="text-left">
-                                            <label htmlFor="email" className="font-semibold">Your Email:</label>
-                                            <input name="email" id="email" type="email" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Email :"/>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="grid grid-cols-1">
-                                    <div className="mb-5">
-                                        <div className="text-left">
-                                            <label htmlFor="comments" className="font-semibold">Your Comment:</label>
-                                            <textarea name="comments" id="comments" className="mt-3 w-full py-2 px-3 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0 h-28" placeholder="Message :"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="submit" id="submit" name="send" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md w-full">Send Message</button>
-                            </form>
-                        </div> */}
+              {auxiliares + enfermeros !== 0 && (
+                <div className="mt-6">
+                  <form className="mt-6">
+                    <div className="mb-5">
+                      <div className="text-left">
+                        <label htmlFor="comments" className="font-semibold">
+                          Uso de Enfermero o Auxiliar
+                        </label>
+                        <textarea
+                          name="comments"
+                          id="comments"
+                          className="mt-3 w-full py-2 px-3 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-300 dark:border-gray-800 focus:ring-0 h-28"
+                          placeholder="Uso :"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              )}
             </div>
 
             <DetailSidebar />

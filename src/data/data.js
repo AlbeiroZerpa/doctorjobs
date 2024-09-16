@@ -419,17 +419,20 @@ export const placeImage = [
 export const faqData = [
   {
     id: 1,
-    title: "¿Qué servicios están incluidos en el alquiler de consultorios y quirófanos?",
+    title:
+      "¿Qué servicios están incluidos en el alquiler de consultorios y quirófanos?",
     desc: "Nuestros espacios incluyen consultorios y quirófanos completamente funcionales, equipados según tus necesidades. Dependiendo del lugar que elijas, podrás acceder a opciones básicas o avanzadas, con comodidades como mobiliario, aire acondicionado, conexión a internet y más. Además, tienes la posibilidad de alquilar equipos médicos adicionales o contratar personal especializado según el tipo de servicio que desees ofrecer.",
   },
   {
     id: 2,
-    title: "¿Puedo alquilar un consultorio o quirófano por horas o días específicos?",
+    title:
+      "¿Puedo alquilar un consultorio o quirófano por horas o días específicos?",
     desc: "Sí, puedes alquilar tanto consultorios como quirófanos por el tiempo que necesites, ya sea por horas o por días completos. Esto te permite planificar mejor tu agenda y optimizar costos, utilizando el espacio solo cuando lo requieras para tus consultas, cirugías o reuniones médicas.",
   },
   {
     id: 3,
-    title: "¿Puedo solicitar equipos médicos o personal adicional cuando alquilo un espacio?",
+    title:
+      "¿Puedo solicitar equipos médicos o personal adicional cuando alquilo un espacio?",
     desc: "Absolutamente. Nuestra plataforma te permite, además de alquilar el espacio, solicitar equipos médicos especializados o personal de apoyo como enfermeros o asistentes quirúrgicos. Esto garantiza que tengas todo lo que necesitas para atender a tus pacientes de manera eficiente, sin importar si es para una consulta o una intervención quirúrgica.",
   },
   {
@@ -439,8 +442,7 @@ export const faqData = [
   },
   {
     id: 5,
-    title:
-      "¿Hay estacionamiento disponible para mis pacientes?",
+    title: "¿Hay estacionamiento disponible para mis pacientes?",
     desc: "La mayoría de nuestros consultorios y quirófanos cuentan con estacionamiento para pacientes. Te recomendamos verificar la disponibilidad de este servicio al momento de hacer tu reserva para asegurarte de que tus pacientes tengan la mejor experiencia posible.",
   },
   {
@@ -457,8 +459,7 @@ export const faqData = [
   },
   {
     id: 8,
-    title:
-      "¿Qué sucede si necesito cancelar o modificar una reserva?",
+    title: "¿Qué sucede si necesito cancelar o modificar una reserva?",
     desc: "Entendemos que las circunstancias pueden cambiar, por lo que puedes modificar o cancelar tu reserva bajo ciertas condiciones. Las políticas de cancelación pueden variar dependiendo del espacio reservado, por lo que te recomendamos revisar los términos al hacer la reserva.",
   },
   {
@@ -482,7 +483,7 @@ export const tourDetailAbout = [
   },
   {
     icon: FaRegBuilding,
-    name: "Altura",
+    name: "Piso",
     title: "3er Piso",
   },
   {

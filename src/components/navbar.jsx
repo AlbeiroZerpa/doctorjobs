@@ -179,7 +179,7 @@ export default function Navbar({ navclass, navlight, manuclass }) {
                   : ""
               }`}
             >
-              <Link to="/alquileres">Alquiler de Espacios Fisicos</Link>
+              <Link to="/alquileres">Alquiler de Espacios Físicos</Link>
               <span className="menu-arrow"></span>
               <ul
                 className={`submenu ${

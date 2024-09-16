@@ -30,7 +30,6 @@ export default function DetailSidebar() {
   const navigate = useNavigate();
   const [startDate, setStartDate] = useState(new Date());
   const [startDate2, setStartDate2] = useState(new Date());
-  const [inputPacientes, setinputPacientes] = useState();
   const [excludeTimes, setExcludeTimes] = useState([
     new Date().setHours(16, 0, 0, 0), // 4:00 PM
   ]);
@@ -95,45 +94,26 @@ export default function DetailSidebar() {
                 dateFormat="h:mm aa"
               />
             </div>
+            <label className="font-semibold mt-2">Hora Final:</label>
+            <div className="relative mt-2">
+              <FiClock className="size-[18px] absolute top-[10px] start-3 z-50" />
+              <DatePicker
+                locale={es}
+                className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-300 dark:border-gray-800 focus:ring-0 start"
+                selected={startDate2}
+                onChange={handleTimeChange}
+                showTimeSelect
+                showTimeSelectOnly
+                wrapperClassName="w-full"
+                timeIntervals={60}
+                excludeTimes={excludeTimes.map((time) => new Date(time))}
+                timeCaption="Hora"
+                dateFormat="h:mm aa"
+              />
+            </div>
           </div>
-          <label className="font-semibold mt-3">Hora Final:</label>
-          <div className="relative mt-2">
-            <FiClock className="size-[18px] absolute top-[10px] start-3 z-50" />
-            <DatePicker
-              locale={es}
-              className="w-full py-2 px-3 ps-10 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-300 dark:border-gray-800 focus:ring-0 start"
-              selected={startDate2}
-              onChange={handleTimeChange}
-              showTimeSelect
-              showTimeSelectOnly
-              wrapperClassName="w-full"
-              timeIntervals={60}
-              excludeTimes={excludeTimes.map((time) => new Date(time))}
-              timeCaption="Hora"
-              dateFormat="h:mm aa"
-            />
-          </div>
-          <div className="mt-4">
+          <div className="mt-10">
             <form>
-              <div className="md:flex">
-                <div className="md:w-1/3">
-                  <span className="font-medium">Nu. de pacientes:</span>
-                </div>
-                <div className="md:w-2/3 mt-4 md:mt-0">
-                  <div className="form-icon relative">
-                    <FiUser className="w-4 h-4 absolute top-3 start-4"></FiUser>
-                    <input
-                      type="number"
-                      className="w-full ps-12 py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0"
-                      placeholder="Nu. de pacientes:"
-                      id="Noperson"
-                      name="number"
-                      value={inputPacientes}
-                      onChange={inputPacientes}
-                    />
-                  </div>
-                </div>
-              </div>
               <div className="md:flex w-full mt-4">
                 <span className="font-medium text-end text-4xl">
                   {price} Créditos
@@ -166,7 +146,7 @@ export default function DetailSidebar() {
 
           <div className="mt-4">
             <button
-              className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md w-full"
+              className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md w-full h-20 "
               onClick={handleAlquilar}
             >
               {isLoading ? <Spinner className="mx-auto block" /> : "Reservar"}
