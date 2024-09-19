@@ -30,7 +30,8 @@ export default function Login() {
         email: '',
         puntos: 0,
         name: 'John',
-        apellido: 'Doe'
+        apellido: 'Doe',
+        verificacion: false
     });
 
     // Función para manejar los cambios en los inputs

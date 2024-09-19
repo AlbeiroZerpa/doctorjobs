@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+
 import {
   FiUser,
   FiUserCheck,
@@ -17,10 +18,27 @@ import {
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useState } from "react";
+
+import { Spinner } from "react-activity";
+import "react-activity/dist/library.css";
+
+import useUserStore from "../../store/userStore";
 
 export const VerificacionConfiguracion = () => {
+
+  const { verificacionUser } = useUserStore()
+
   const [startDate, setStartDate] = useState(new Date());
+  const [isLoading, setIsLoading] = useState(false)
+
+  const handleClick = () => {
+    setIsLoading(true)
+    return setTimeout(()=>{
+      verificacionUser()
+      setIsLoading(false)
+    },1500)
+  }
+
   return (
     <div className="lg:w-3/4 md:w-2/3 md:px-3 mt-6 md:mt-0">
       <h5 className="text-xl font-semibold mb-4">
@@ -194,14 +212,6 @@ export const VerificacionConfiguracion = () => {
               </div>
             </div>
           </div>
-
-          <input
-            type="submit"
-            id="submit"
-            name="send"
-            className="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md mt-5"
-            value="Guardar Cambios"
-          />
         </form>
       </div>
 
@@ -309,7 +319,7 @@ export const VerificacionConfiguracion = () => {
             </div>
             <div>
               <label className="form-label font-medium">
-              Descripción adicional : <span className="text-red-600">*</span>
+                Descripción adicional : <span className="text-red-600">*</span>
               </label>
               <div className="form-icon relative mt-2">
                 <TiMessage className="w-4 h-4 absolute top-3 start-4"></TiMessage >
@@ -325,33 +335,11 @@ export const VerificacionConfiguracion = () => {
             </div>
           </div>
 
-          <input
-            type="submit"
-            id="submit"
-            name="send"
-            className="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md mt-5"
-            value="Guardar Cambios"
-          />
         </form>
       </div>
-
-      <div className="p-6 rounded-md shadow dark:shadow-gray-800 bg-white dark:bg-slate-900 mt-6">
-        <h5 className="text-lg font-semibold mb-5 text-red-600">
-          Eliminar cuenta :
-        </h5>
-
-        <p className="text-slate-400 mb-4">
-          ¿Quieres eliminar la cuenta? Por favor presione el botón "Eliminar"
-          debajo
-        </p>
-
-        <Link
-          to=""
-          className="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-red-600 text-white rounded-md"
-        >
-          Eliminar
-        </Link>
-      </div>
+      <button onClick={handleClick} className="py-2 px-5 mx-auto block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md mt-5">
+        {isLoading ? <Spinner className="mx-auto block" /> : 'Enviar'}
+      </button>
     </div>
   );
 };

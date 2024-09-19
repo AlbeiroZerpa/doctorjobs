@@ -22,6 +22,12 @@ export default function Navbar({ navclass, navlight, manuclass }) {
   const location = useLocation();
   const { user, logout } = useUserStore();
   const navigate = useNavigate();
+=======
+    const [scrolling, setScrolling] = useState(false);
+    const [isToggle, setToggle] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [userManu, setUserManu] = useState(false);
+>>>>>>> Stashed changes
 
   useEffect(() => {
     const handleScroll = () => {

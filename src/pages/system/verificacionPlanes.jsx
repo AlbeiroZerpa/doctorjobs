@@ -19,7 +19,7 @@ export default function VerificacionPlanes(){
 
                             <div className="px-6 py-12 text-center">
                                 <p className="text-black font-semibold text-xl dark:text-white">Felicidades! 🎉</p> 
-                                <p className="text-slate-400 mt-4"> Su cuenta ha sido creada exitosamente. <br/>Disfruta tu viaje. Gracias</p>
+                                <p className="text-slate-400 mt-4"> Su compra ha sido satifactoria.</p>
                                 
                                 <div className="mt-6">
                                     <Link to="/" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md">Continuar</Link>

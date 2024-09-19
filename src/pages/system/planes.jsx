@@ -8,18 +8,26 @@ import useUserStore from "../../store/userStore";
 
 export default function Planes() {
 
-  const { addPuntos } = useUserStore();
+  const { addPuntos, user } = useUserStore();
   const navigate = useNavigate();
 
   // Estado para controlar si está cargando
   const [isLoading, setIsLoading] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   const handleCompra = (item) => {
     setIsLoading(true)
-    setTimeout(() => {
-      addPuntos(item)
-      navigate("/verificacion-pago-planes")
-    },1500)
+    if (user.verificacion === true) {
+      return setTimeout(() => {
+        addPuntos(item)
+        navigate("/verificacion-pago-planes")
+      }, 1500)
+    }else{
+      return setTimeout(() => {
+        setIsOpen(true)
+        setIsLoading(false)
+      },1500)
+    }
   }
 
   return (
@@ -69,7 +77,7 @@ export default function Planes() {
               </ul>
               <div className="flex justify-center">
                 <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100 w-full" onClick={() => handleCompra(1000)}>
-                {isLoading ? <Spinner className="mx-auto block" /> : 'Comprar Ahora'}
+                  {isLoading ? <Spinner className="mx-auto block" /> : 'Comprar Ahora'}
                 </button>
               </div>
             </div>
@@ -85,8 +93,8 @@ export default function Planes() {
                 <li>Duración: 2 meses</li>
               </ul>
               <div className="flex justify-center">
-              <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100 w-full" onClick={() => handleCompra(3000)}>
-                {isLoading ? <Spinner className="mx-auto block" /> : 'Comprar Ahora'}
+                <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100 w-full" onClick={() => handleCompra(3000)}>
+                  {isLoading ? <Spinner className="mx-auto block" /> : 'Comprar Ahora'}
                 </button>
               </div>
             </div>
@@ -102,8 +110,8 @@ export default function Planes() {
                 <li>Duración: 2 meses</li>
               </ul>
               <div className="flex justify-center">
-              <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100 w-full" onClick={() => handleCompra(5000)}>
-                {isLoading ? <Spinner className="mx-auto block" /> : 'Comprar Ahora'}
+                <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100 w-full" onClick={() => handleCompra(5000)}>
+                  {isLoading ? <Spinner className="mx-auto block" /> : 'Comprar Ahora'}
                 </button>
               </div>
             </div>
@@ -119,8 +127,8 @@ export default function Planes() {
                 <li>Duración: 2 meses</li>
               </ul>
               <div className="flex justify-center">
-              <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100 w-full" onClick={() => handleCompra(20000)}>
-                {isLoading ? <Spinner className="mx-auto block" /> : 'Comprar Ahora'}
+                <button className="mt-6 p-2 bg-red-500 text-white rounded-md  hover:duration-100 w-full" onClick={() => handleCompra(20000)}>
+                  {isLoading ? <Spinner className="mx-auto block" /> : 'Comprar Ahora'}
                 </button>
               </div>
             </div>
@@ -128,6 +136,27 @@ export default function Planes() {
         </div>
       </section>
       <Switcher />
+      {isOpen && <>
+                <div className='fixed inset-0 bg-black opacity-70 h-screen w-full z-10'>
+                </div>
+                <div
+                    className="fixed inset-0 flex items-center justify-center z-20"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    {/* Modal Content */}
+                    <div className="p-8 rounded-md shadow dark:shadow-gray-700 bg-white dark:bg-black w-full max-w-md mx-4 relative">
+                        <h3 className='text-center'>No es un usuario verificado, para poder comprar puntos por favor verifiquese en su perfil.</h3>
+                        <div className="flex justify-center">
+                            <button onClick={() => setIsOpen(!isOpen)} className='mx-2 mt-4 block py-2 px-5 tracking-wide align-middle duration-500 text-base text-center border border-red-500 text-red-500 dark:text-white rounded-md'>
+                                Cerrar
+                            </button>
+                            <button onClick={() => navigate("/configuracion")} className='mx-2 mt-4 block py-2 px-5 tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md'>
+                                Verificar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </>}
     </>
   );
 }

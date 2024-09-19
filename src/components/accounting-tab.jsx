@@ -2,7 +2,11 @@ import clientImg from "../assets/images/client/16.jpg"
 
 import {FiAirplay, FiClock, FiFileText, FiHeart, FiLogOut} from '../assets/icons/vander'
 
+import useUserStore from "../store/userStore";
+
 export default function AccountingTab({ activeTab, setactiveTab }) {
+
+    const { user } = useUserStore()
 
     let loadFile =(e)=>{
         var image = document.getElementById(e.target.name);
@@ -24,6 +28,11 @@ export default function AccountingTab({ activeTab, setactiveTab }) {
                             <div className="mt-4">
                                 <h5 className="text-lg font-semibold">Jesus Zamora</h5>
                                 <p className="text-slate-400">jesus@hotmail.com</p>
+                                <p
+                                    className={`inline-block border py-1 px-2 text-xs rounded ${user.verificacion ? "border-green-500 text-green-500" : "border-red-700 text-red-700" }`}
+                                >
+                                    {user.verificacion ? "Verificado" : "No Verificiado"}
+                                </p>
                             </div>
                         </div>
                     </div>
