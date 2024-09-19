@@ -9,17 +9,25 @@ import image4 from "../../assets/images/listing/4.jpg";
 import DetailSidebar from "../../components/detail-sidebar";
 import Switcher from "../../components/switcher";
 
+<<<<<<< Updated upstream
 import { FiCamera, FiMapPin, FiUsers } from "../../assets/icons/vander";
+=======
+import {FiCamera, FiMapPin} from '../../assets/icons/vander'
+>>>>>>> Stashed changes
 
 import Lightbox from "react-18-image-lightbox";
 import "react-18-image-lightbox/style.css";
 
 import { packages, tourDetailAbout } from "../../data/data";
 
+<<<<<<< Updated upstream
 export default function Alquiler() {
   let [activeTab, setActiveTab] = useState(1);
   const [auxiliares, setAuxiliares] = useState(0);
   const [enfermeros, setEnfermeros] = useState(0);
+=======
+export default function Alquiler(){
+>>>>>>> Stashed changes
 
   let images = [image1, image2, image3, image4];
   let [photoIndex, setActiveIndex] = useState(0);
