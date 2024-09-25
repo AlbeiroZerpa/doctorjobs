@@ -46,7 +46,6 @@ import {
   FiInstagram,
   FiTwitter,
   FiMail,
-  FiUsers,
   FiGlobe,
   FiYoutube,
   FiHelpCircle,
@@ -54,7 +53,6 @@ import {
   FiSettings,
   FiGithub,
   FiGitlab,
-  SlSizeFullscreen,
   TbSortAscending2,
   LiaUserClockSolid,
 } from "../assets/icons/vander";
@@ -110,96 +108,420 @@ export const packages = [
     place: "Guayaquil",
     title:
       "CENTRO CLÍNICO QUIRÚRGICO AMBULATORIO HOSPITAL DEL DÍA NORTE TARQUI - IESS",
-    amount: "58 / Día",
+    amount: 38,
     type: "Consultorio",
+    features: [
+      {
+        icon: FiGlobe,
+        name: "Internet",
+        title: "No",
+      },
+      {
+        icon: FaRegBuilding,
+        name: "2do Piso",
+        title: "Sí",
+      },
+      {
+        icon: TbSortAscending2,
+        name: "Ascensor",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Sala de espera",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Parqueo",
+        title: "No",
+      },
+    ],
   },
   {
     id: 2,
     image: listing2,
-    place: "Guayaquil",
+    place: "Quito",
     title: "CENTRO MÉDICO FAMYSALUD",
-    amount: "58 / Día",
+    amount: 48,
     type: "Quirofáno",
+    features: [
+      {
+        icon: FiGlobe,
+        name: "Internet",
+        title: "Sí",
+      },
+      {
+        icon: FaRegBuilding,
+        name: "Planta Baja",
+        title: "Sí",
+      },
+      {
+        icon: TbSortAscending2,
+        name: "Ascensor",
+        title: "No",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Sala de espera",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Parqueo",
+        title: "No",
+      },
+    ],
   },
   {
     id: 3,
     image: listing3,
     place: "Guayaquil",
     title: "CENTRO MEDICO ALBATROS",
-    amount: "58 / Día",
+    amount: 58,
     type: "Reuniones",
+    features: [
+      {
+        icon: FiGlobe,
+        name: "Internet",
+        title: "Sí",
+      },
+      {
+        icon: FaRegBuilding,
+        name: "3er Piso",
+        title: "Sí",
+      },
+      {
+        icon: TbSortAscending2,
+        name: "Ascensor",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Sala de espera",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Parqueo",
+        title: "No",
+      },
+    ],
   },
   {
     id: 4,
     image: listing4,
     place: "Guayaquil",
     title: "CENTRO DE ESPECIALIDADES LETAMENDI",
-    amount: "58 / Día",
+    amount: 68,
     type: "Consultorio",
+    features: [
+      {
+        icon: FiGlobe,
+        name: "Internet",
+        title: "Sí",
+      },
+      {
+        icon: FaRegBuilding,
+        name: "3er Piso",
+        title: "Sí",
+      },
+      {
+        icon: TbSortAscending2,
+        name: "Ascensor",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Sala de espera",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Parqueo",
+        title: "Si",
+      },
+    ],
   },
   {
     id: 5,
     image: listing5,
     place: "Guayaquil",
     title: "CENTRO DE ESPECIALIDADES CENTRAL GUAYAS #6 IESS",
-    amount: "58 / Día",
+    amount: 78,
     type: "Quirofáno",
+    features: [
+      {
+        icon: FiGlobe,
+        name: "Internet",
+        title: "Sí",
+      },
+      {
+        icon: FaRegBuilding,
+        name: "3er Piso",
+        title: "Sí",
+      },
+      {
+        icon: TbSortAscending2,
+        name: "Ascensor",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Sala de espera",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Parqueo",
+        title: "Si",
+      },
+    ],
   },
   {
     id: 6,
     image: listing6,
     place: "Guayaquil",
     title: "CENTRO DE ESPECIALIDADES MEDICAS BIENESTAR",
-    amount: "58 / Día",
+    amount: 88,
     type: "Reuniones",
+    features: [
+      {
+        icon: FiGlobe,
+        name: "Internet",
+        title: "Sí",
+      },
+      {
+        icon: FaRegBuilding,
+        name: "3er Piso",
+        title: "Sí",
+      },
+      {
+        icon: TbSortAscending2,
+        name: "Ascensor",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Sala de espera",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Parqueo",
+        title: "No",
+      },
+    ],
   },
   {
     id: 7,
     image: listing7,
     place: "Guayaquil",
     title: "CENTRO DE ESPECIALIDADES VIRGEN DEL CISNE",
-    amount: "58 / Día",
+    amount: 38,
     type: "Consultorio",
+    features: [
+      {
+        icon: FiGlobe,
+        name: "Internet",
+        title: "Sí",
+      },
+      {
+        icon: FaRegBuilding,
+        name: "3er Piso",
+        title: "Sí",
+      },
+      {
+        icon: TbSortAscending2,
+        name: "Ascensor",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Sala de espera",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Parqueo",
+        title: "Si",
+      },
+    ],
   },
   {
     id: 8,
     image: listing8,
     place: "Guayaquil",
     title: "SEMEDIC CENTRO DE ESPECIALIDADES",
-    amount: "58 / Día",
+    amount: 28,
     type: "Quirofáno",
+    features: [
+      {
+        icon: FiGlobe,
+        name: "Internet",
+        title: "Sí",
+      },
+      {
+        icon: FaRegBuilding,
+        name: "3er Piso",
+        title: "Sí",
+      },
+      {
+        icon: TbSortAscending2,
+        name: "Ascensor",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Sala de espera",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Parqueo",
+        title: "No",
+      },
+    ],
   },
   {
     id: 9,
     image: listing9,
     place: "Guayaquil",
     title: "CENTRO DE ESPECIALIDADES MÉDICAS SAN JUAN",
-    amount: "58 / Día",
+    amount: 18,
     type: "Reuniones",
+    features: [
+      {
+        icon: FiGlobe,
+        name: "Internet",
+        title: "Sí",
+      },
+      {
+        icon: FaRegBuilding,
+        name: "3er Piso",
+        title: "Sí",
+      },
+      {
+        icon: TbSortAscending2,
+        name: "Ascensor",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Sala de espera",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Parqueo",
+        title: "Si",
+      },
+    ],
   },
   {
     id: 10,
     image: listing10,
     place: "Guayaquil",
     title: "CENTRO MÉDICO DE ESPECIALIDADES AUXILIADORA",
-    amount: "58 / Día",
+    amount: 38,
     type: "Consultorio",
+    features: [
+      {
+        icon: FiGlobe,
+        name: "Internet",
+        title: "Sí",
+      },
+      {
+        icon: FaRegBuilding,
+        name: "3er Piso",
+        title: "Sí",
+      },
+      {
+        icon: TbSortAscending2,
+        name: "Ascensor",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Sala de espera",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Parqueo",
+        title: "Sí",
+      },
+    ],
   },
   {
     id: 11,
     image: listing11,
-    place: "Guayaquil",
+    place: "Cuenca",
     title: "CEMAN CENTRO DE ESPECIALIDADES MÉDICAS MANRIQUE",
-    amount: "58 / Día",
+    amount: 68,
     type: "Quirofáno",
+    features: [
+      {
+        icon: FiGlobe,
+        name: "Internet",
+        title: "Sí",
+      },
+      {
+        icon: FaRegBuilding,
+        name: "3er Piso",
+        title: "Sí",
+      },
+      {
+        icon: TbSortAscending2,
+        name: "Ascensor",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Sala de espera",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Parqueo",
+        title: "No",
+      },
+    ],
   },
   {
     id: 12,
     image: listing12,
-    place: "Guayaquil",
+    place: "Quito",
     title: "FUNDACIÓN NAHIM ISAÍAS CENTRO MÉDICO DE ESPECIALIDADES",
-    amount: "58 / Día",
+    amount: 58,
     type: "Reuniones",
+    features: [
+      {
+        icon: FiGlobe,
+        name: "Internet",
+        title: "Sí",
+      },
+      {
+        icon: FaRegBuilding,
+        name: "3er Piso",
+        title: "Sí",
+      },
+      {
+        icon: TbSortAscending2,
+        name: "Ascensor",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Sala de espera",
+        title: "Sí",
+      },
+      {
+        icon: LiaUserClockSolid,
+        name: "Parqueo",
+        title: "No",
+      },
+    ],
   },
 ];
 
@@ -442,8 +764,8 @@ export const faqData = [
   },
   {
     id: 5,
-    title: "¿Hay estacionamiento disponible para mis pacientes?",
-    desc: "La mayoría de nuestros consultorios y quirófanos cuentan con estacionamiento para pacientes. Te recomendamos verificar la disponibilidad de este servicio al momento de hacer tu reserva para asegurarte de que tus pacientes tengan la mejor experiencia posible.",
+    title: "¿Hay Estacionamiento disponible para mis pacientes?",
+    desc: "La mayoría de nuestros consultorios y quirófanos cuentan con Parqueo para pacientes. Te recomendamos verificar la disponibilidad de este servicio al momento de hacer tu reserva para asegurarte de que tus pacientes tengan la mejor experiencia posible.",
   },
   {
     id: 6,
@@ -467,34 +789,6 @@ export const faqData = [
     title:
       "¿Cómo puedo asegurarme de que el equipo o personal solicitado estará disponible?",
     desc: "Nuestra plataforma garantiza la disponibilidad de equipos y personal médico en el momento de la reserva. Te confirmaremos la disponibilidad inmediatamente y nos aseguraremos de que todo esté listo para cuando lo necesites.",
-  },
-];
-
-export const tourDetailAbout = [
-  {
-    icon: SlSizeFullscreen,
-    name: "Dimensiones",
-    title: "15 m²",
-  },
-  {
-    icon: FiGlobe,
-    name: "Internet",
-    title: "Sí",
-  },
-  {
-    icon: FaRegBuilding,
-    name: "Piso",
-    title: "3er Piso",
-  },
-  {
-    icon: TbSortAscending2,
-    name: "Ascensor",
-    title: "Sí",
-  },
-  {
-    icon: LiaUserClockSolid,
-    name: "Sala de espera",
-    title: "Sí",
   },
 ];
 

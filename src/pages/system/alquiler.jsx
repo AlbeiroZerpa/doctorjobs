@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import image1 from "../../assets/images/listing/1.jpg";
@@ -9,25 +9,17 @@ import image4 from "../../assets/images/listing/4.jpg";
 import DetailSidebar from "../../components/detail-sidebar";
 import Switcher from "../../components/switcher";
 
-<<<<<<< Updated upstream
 import { FiCamera, FiMapPin, FiUsers } from "../../assets/icons/vander";
-=======
-import {FiCamera, FiMapPin} from '../../assets/icons/vander'
->>>>>>> Stashed changes
 
 import Lightbox from "react-18-image-lightbox";
 import "react-18-image-lightbox/style.css";
 
-import { packages, tourDetailAbout } from "../../data/data";
+import { packages} from "../../data/data";
 
-<<<<<<< Updated upstream
 export default function Alquiler() {
   let [activeTab, setActiveTab] = useState(1);
   const [auxiliares, setAuxiliares] = useState(0);
   const [enfermeros, setEnfermeros] = useState(0);
-=======
-export default function Alquiler(){
->>>>>>> Stashed changes
 
   let images = [image1, image2, image3, image4];
   let [photoIndex, setActiveIndex] = useState(0);
@@ -60,7 +52,7 @@ export default function Alquiler(){
         <div className="container relative">
           <div className="grid grid-cols-1 pb-8 text-center mt-10">
             <h3 className="text-3xl leading-normal tracking-wider font-semibold text-white">
-              {data?.title ? data.title : `Consultorio #02: "Clínica Pasteur`}
+              {data?.title ? data.title : `????????`}
             </h3>
           </div>
         </div>
@@ -68,7 +60,7 @@ export default function Alquiler(){
         <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
           <ul className="tracking-[0.5px] mb-0 inline-block">
             <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white">
-              <Link to="/">Travosy</Link>
+              <Link to="/">Inicio</Link>
             </li>
             <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180">
               <i className="mdi mdi-chevron-right"></i>
@@ -169,18 +161,18 @@ export default function Alquiler(){
               </div>
 
               <h5 className="text-2xl font-semibold mt-5">
-                550 Créditos / Hora
+                {data?.amount ? data.amount : "No encontrado"} pts por hora
               </h5>
               <h5 className="text-2xl font-semibold mt-5">
-                {data?.title ? data.title : "Consultorio #02: Clínica Pasteur"}
+                {data?.title ? data.title : "No encontrado"}
               </h5>
               <p className="flex items-center text-slate-400 font-medium mt-2">
                 <FiMapPin className="size-4 me-1"></FiMapPin>{" "}
-                {data?.place ? data.place : "Guayaquil"}
+                {data?.place ? data.place : "No encontrado"}
               </p>
 
               <ul className="list-none">
-                {tourDetailAbout.map((item, index) => {
+                {data.features.map((item, index) => {
                   let Icon = item.icon;
                   return (
                     <li
