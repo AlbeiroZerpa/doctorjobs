@@ -55,7 +55,7 @@ export default function AccountingTab({ activeTab, setactiveTab }) {
                             >
                                 <div className="navbar-link flex items-center py-2 rounded cursor-pointer">
                                     <span className="me-2 mb-0"><FiFileText className="size-4" /></span>
-                                    <h6 className="mb-0 font-medium">Verificación</h6>
+                                    <h6 className="mb-0 font-medium">Verificación Médica</h6>
                                 </div>
                             </li>
 
