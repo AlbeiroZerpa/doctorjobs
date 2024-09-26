@@ -26,8 +26,8 @@ export default function AccountingTab({ activeTab, setactiveTab }) {
                             </div>
 
                             <div className="mt-4">
-                                <h5 className="text-lg font-semibold">Jesus Zamora</h5>
-                                <p className="text-slate-400">jesus@hotmail.com</p>
+                                <h5 className="text-lg font-semibold">{user.nombre} {user.apellido}</h5>
+                                <p className="text-slate-400">{user.correo}</p>
                                 <p
                                     className={`inline-block border py-1 px-2 text-xs rounded ${user.verificacion ? "border-green-500 text-green-500" : "border-red-700 text-red-700" }`}
                                 >

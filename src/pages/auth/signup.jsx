@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import logo from "../../assets/images/logo-icon.png"
 
 import BackToHome from "../../components/back-to-home";
 import Switcher from "../../components/switcher";
@@ -11,6 +10,7 @@ import useUserStore from "../../store/userStore";
 import { Spinner } from "react-activity";
 import "react-activity/dist/library.css";
 import { FiEye } from "../../assets/icons/vander";
+import { HttpAuth } from "../../apis/HttpAuth";
 
 export default function Signup() {
 
@@ -29,10 +29,10 @@ export default function Signup() {
     // Estado para almacenar los valores de los campos
     const [formData, setFormData] = useState({
         password: '',
-        email: '',
-        puntos: 0,
-        name: 'John',
-        apellido: 'Doe'
+        correo: '',
+        nombre: '',
+        apellido: '',
+        telefono: ''
     });
 
     // Función para manejar los cambios en los inputs
@@ -48,18 +48,24 @@ export default function Signup() {
         e.preventDefault();
 
         setIsLoading(true)
-        setTimeout(() => {
-            if (formData.email === "cliente@prueba.com") {
-                setError("Correo ya existe")
-                setIsLoading(false)
-                return setTimeout(() => {
-                    setError(null)
-                }, 1500)
-            }else{
-                login(formData);
-                navigate('/signup-success');
-            }
-        }, 1500)
+
+        HttpAuth.Registro(formData)
+            .then((response) => {
+                console.log(response)
+                if (response.status === 201) {
+                    login(response.data.medico)
+                    navigate('/signup-success');
+                }else if(response.status === 400){
+                    setError(response.data.error)
+                    setIsLoading(false)
+                    setTimeout(() => {
+                        setError(null)
+                    }, 1500)
+                }else{
+                    alert(response.data.error)
+                }
+            })
+
 
     };
 
@@ -71,23 +77,26 @@ export default function Signup() {
                 <div className="container relative z-3">
                     <div className="flex justify-center">
                         <div className="max-w-[400px] w-full m-auto p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-700 rounded-md">
-                            <Link to="/"><img src={logo} className="mx-auto" alt="" /></Link>
                             <h5 className="my-6 text-xl font-semibold">Registrarse</h5>
                             <form onSubmit={handleSubmit} className="text-start" action="signup-success.html">
                                 <div className="grid grid-cols-1">
                                     <div className="mb-4">
                                         <label className="font-semibold" htmlFor="RegisterName">Tu Nombre:</label>
-                                        <input id="RegisterName" type="text" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="John" required />
+                                        <input name="nombre" onChange={handleChange} type="text" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="John" required />
                                     </div>
                                     <div className="mb-4">
                                         <label className="font-semibold" htmlFor="RegisterName">Apellido:</label>
-                                        <input id="RegisterName" type="text" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Doe" required />
+                                        <input name="apellido" onChange={handleChange} type="text" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Doe" required />
+                                    </div>
+
+                                    <div className="mb-4">
+                                        <label className="font-semibold" htmlFor="RegisterName">Teléfono:</label>
+                                        <input name="telefono" onChange={handleChange} value={formData.telefono} type="text" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Doe" required />
                                     </div>
 
                                     <div className="mb-4">
                                         <label className="font-semibold" htmlFor="LoginEmail">Correo Eléctronico:</label>
-                                        <input name="email" onChange={handleChange} value={formData.email} type="email" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="ejemplo@ejemplo.com" required />
-                                        {error !== null && <label className="text-red-600">{error}</label>}
+                                        <input name="correo" onChange={handleChange} value={formData.email} type="email" className="mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="ejemplo@ejemplo.com" required />
                                     </div>
                                     <div className="mb-4">
                                         <label className="form-label font-medium">Contraseña: </label>
@@ -112,8 +121,9 @@ export default function Signup() {
                                         </div>
                                     </div>
 
-                                    <div className="mb-4">
+                                    {error !== null && <label className="text-red-600 mb-4">{error}</label>}
 
+                                    <div className="mb-4">
                                         <button type="submit" className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md w-full">
                                             {isLoading ? <Spinner className="mx-auto block" /> : 'Registrar'}
                                         </button>
