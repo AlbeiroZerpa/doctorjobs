@@ -23,12 +23,14 @@ const useUserStore = create(
             ? { ...state.user, puntos: state.user.puntos + nuevosPuntos }
             : null,
         })),
+        
       removePuntos: (puntosARestar) =>
         set((state) => ({
           user: state.user
             ? { ...state.user, puntos: state.user.puntos - puntosARestar }
             : null,
         })),
+
       verificacionUser: () =>
         set((state) => ({
           user: state.user ? { ...state.user, verificacion: true } : null,
@@ -70,9 +72,9 @@ const useUserStore = create(
         return [...new Set(types)];
       },
 
-      // Obtener features distintos de los packages
       getDistinctFeatures: () => {
-        const features = get().packages.flatMap((pkg) => pkg.features.map(feature => feature.name)); // Cambiado aquí
+        const packages = get().packages || []; // Asegúrate de que "packages" siempre sea un array
+        const features = packages.flatMap((pkg) => pkg.features?.map((feature) => feature.name) || []); // Verifica si "features" existe antes de usar "map"
         return [...new Set(features)];
       },
 
