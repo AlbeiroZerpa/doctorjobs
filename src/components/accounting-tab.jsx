@@ -1,6 +1,7 @@
 import clientImg from "../assets/images/client/16.jpg";
 
 import {
+  FaEdit,
   FiAirplay,
   FiClock,
   FiFileText,
@@ -9,7 +10,6 @@ import {
 } from "../assets/icons/vander";
 
 import useUserStore from "../store/userStore";
-import { FaPen } from "react-icons/fa6";
 
 export default function AccountingTab({ activeTab, setactiveTab }) {
   const { user } = useUserStore();
@@ -40,10 +40,10 @@ export default function AccountingTab({ activeTab, setactiveTab }) {
                   alt=""
                 />
                 <label
-                  className="absolute inset-0 cursor-pointer flex items-center justify-center rounded-full transition-opacity duration-300 opacity-0 group-hover:opacity-60 bg-black bg-opacity-50"
+                  className="absolute inset-0 cursor-pointer flex items-center justify-center rounded-full opacity-0 group-hover:opacity-50 group-hover:bg-black transition-all duration-50"
                   htmlFor="pro-img"
                 >
-                  <FaPen className="text-white transition-opacity duration-300" />
+                  <FaEdit className="text-white" />
                 </label>
               </div>
 
