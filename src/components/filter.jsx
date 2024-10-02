@@ -227,8 +227,7 @@ export default function Filter() {
                   className="form-checkbox-label text-slate-400"
                   htmlFor={feature}
                 >
-                  {feature}{" "}
-                  {/* Asegúrate de que aquí se está utilizando el nombre correcto */}
+                  {feature}
                 </label>
               </div>
             ))}

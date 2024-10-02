@@ -20,10 +20,7 @@ export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
 
   // Estado para almacenar los valores de los errores
-  const [errores, setErrores] = useState({
-    login: null,
-    password: null,
-  });
+  const [errores, setErrores] = useState();
 
   // Estado para almacenar los valores de los campos
   const [formData, setFormData] = useState({
@@ -61,7 +58,7 @@ export default function Login() {
       }
     });
   };
-
+  
   return (
     <>
       <section className="md:h-screen py-36 flex items-center relative overflow-hidden zoom-image">
@@ -73,9 +70,6 @@ export default function Login() {
         <div className="container relative z-3">
           <div className="flex justify-center">
             <div className="max-w-[400px] w-full m-auto p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-700 rounded-md">
-              <Link to="/">
-                <img src={logo} className="mx-auto" alt="" />
-              </Link>
               <h5 className="my-6 text-xl font-semibold">Iniciar Sesión</h5>
               <form onSubmit={handleSubmit} className="text-start">
                 <div className="grid grid-cols-1">
@@ -107,9 +101,6 @@ export default function Login() {
                       placeholder="Contraseña:"
                       required
                     />
-                    {errores.password !== null && (
-                      <label className="text-red-600">{errores.password}</label>
-                    )}
                   </div>
 
                   <div className="flex justify-content-center mb-4">
@@ -132,9 +123,6 @@ export default function Login() {
                       )}
                     </button>
                   </div>
-                  {errores.login !== null && (
-                      <label style={{ color: 'red' }}>{errores.login}</label>
-                    )}
                   <div className="text-center">
                     <span className="text-slate-400 me-2">
                       ¿No tienes una cuenta?
