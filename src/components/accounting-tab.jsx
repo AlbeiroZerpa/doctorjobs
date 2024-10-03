@@ -10,10 +10,23 @@ import {
 } from "../assets/icons/vander";
 
 import useUserStore from "../store/userStore";
+import { useState } from "react";
+import { HttpUsuario } from "../apis/HttpUsuario";
 
 export default function AccountingTab({ activeTab, setactiveTab }) {
   const { user } = useUserStore();
 
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      HttpUsuario.ActualizarFotoPerfil(file)
+        .then((response) =>{
+          console.log(response)
+        })
+    }
+  };
   let loadFile = (e) => {
     var image = document.getElementById(e.target.name);
     image.src = URL.createObjectURL(e.target.files[0]);
@@ -32,16 +45,25 @@ export default function AccountingTab({ activeTab, setactiveTab }) {
               onChange={(e) => loadFile(e)}
             />
             <div>
-              <div className="relative h-28 w-28 mx-auto group">
+              <div className="relative group w-32 h-32">
                 <img
-                  src={clientImg}
-                  className="rounded-full shadow dark:shadow-gray-800 ring-4 ring-slate-50 dark:ring-slate-800"
-                  id="profile-image"
-                  alt=""
+                  src="/default-profile.jpg"
+                  alt="Foto de perfil"
+                  className="w-full h-full object-cover rounded-full"
                 />
+                {/* Input de archivo oculto */}
+                <input
+                  type="file"
+                  accept="image/*"
+                  style={{ display: "none" }}
+                  id="profileImageInput"
+                  onChange={handleImageChange}
+                />
+
+                {/* Botón de edición que abre el input de archivo */}
                 <label
-                  className="absolute inset-0 cursor-pointer flex items-center justify-center rounded-full opacity-0 group-hover:opacity-50 group-hover:bg-black transition-all duration-50"
-                  htmlFor="pro-img"
+                  htmlFor="profileImageInput"
+                  className="absolute inset-0 cursor-pointer flex items-center justify-center rounded-full opacity-0 group-hover:opacity-50 group-hover:bg-black transition-all duration-200"
                 >
                   <FaEdit className="text-white" />
                 </label>
