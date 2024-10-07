@@ -13,20 +13,42 @@ import useUserStore from "../store/userStore";
 import { useState } from "react";
 import { HttpUsuario } from "../apis/HttpUsuario";
 
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
 export default function AccountingTab({ activeTab, setactiveTab }) {
-  const { user } = useUserStore();
+  const { user, login } = useUserStore();
 
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      HttpUsuario.ActualizarFotoPerfil(file)
-        .then((response) =>{
-          console.log(response)
+      let formData = new FormData();
+      formData.append('profileImage', file); // El nombre debe coincidir con lo que espera el backend
+      formData.append('usuarioId', user.id); // Enviar también el usuarioId
+
+      HttpUsuario.ActualizarFotoPerfil(formData)
+        .then((response) => {
+          console.log(30, response); // Manejar la respuesta
+          if (response.status == 200) {
+            login(response.data.usuario)
+          } else {
+            toast.error(response.data.error, {
+              position: "top-right",
+              autoClose: 1500,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            });
+          }
         })
     }
   };
+
   let loadFile = (e) => {
     var image = document.getElementById(e.target.name);
     image.src = URL.createObjectURL(e.target.files[0]);
@@ -45,12 +67,19 @@ export default function AccountingTab({ activeTab, setactiveTab }) {
               onChange={(e) => loadFile(e)}
             />
             <div>
-              <div className="relative group w-32 h-32">
-                <img
-                  src="/default-profile.jpg"
-                  alt="Foto de perfil"
-                  className="w-full h-full object-cover rounded-full"
-                />
+              <div className="relative group w-32 h-32 mx-auto">
+                {user.foto_perfil ? (
+                  <img
+                    src={user.foto_perfil}
+                    alt="Foto de perfil"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-gray-300 text-white text-4xl font-bold rounded-full">
+                    {user.nombre.charAt(0).toUpperCase()}
+                  </div>
+                )}
+
                 {/* Input de archivo oculto */}
                 <input
                   type="file"
@@ -59,6 +88,7 @@ export default function AccountingTab({ activeTab, setactiveTab }) {
                   id="profileImageInput"
                   onChange={handleImageChange}
                 />
+
 
                 {/* Botón de edición que abre el input de archivo */}
                 <label
@@ -75,26 +105,33 @@ export default function AccountingTab({ activeTab, setactiveTab }) {
                 </h5>
                 <p className="text-slate-400">{user.correo}</p>
                 <p
-                  className={`inline-block border py-1 px-2 text-xs rounded ${
-                    user.verificacion
+                  className={`inline-block border py-1 px-2 text-xs rounded
+                      ${user.verificacion_estado === "verificado"
                       ? "border-green-500 text-green-500"
-                      : "border-red-700 text-red-700"
-                  }`}
+                      : user.verificacion_estado === "pendiente"
+                        ? "border-gray-300 text-gray-300"
+                        : "border-red-700 text-red-700"
+                    }`}
                 >
-                  {user.verificacion ? "Verificado" : "No Verificiado"}
+                  {user.verificacion_estado === "verificado"
+                    ? "Verificado"
+                    : user.verificacion_estado === "pendiente"
+                      ? "Pendiente"
+                      : "Sin verificar"}
                 </p>
+
               </div>
             </div>
           </div>
 
+
           <div className="border-t border-gray-100 dark:border-gray-700">
             <ul className="list-none sidebar-nav mb-0 pb-0" id="navmenu-nav">
               <li
-                className={`navbar-item account-menu ${
-                  activeTab === "perfil"
-                    ? "active text-red-500"
-                    : "text-slate-400"
-                }`}
+                className={`navbar-item account-menu ${activeTab === "perfil"
+                  ? "active text-red-500"
+                  : "text-slate-400"
+                  }`}
                 onClick={() => setactiveTab("perfil")}
               >
                 <div className="navbar-link flex items-center py-2 rounded cursor-pointer">
@@ -106,11 +143,10 @@ export default function AccountingTab({ activeTab, setactiveTab }) {
               </li>
 
               <li
-                className={`navbar-item account-menu ${
-                  activeTab === "verificacion"
-                    ? "active text-red-500"
-                    : "text-slate-400"
-                }`}
+                className={`navbar-item account-menu ${activeTab === "verificacion"
+                  ? "active text-red-500"
+                  : "text-slate-400"
+                  }`}
                 onClick={() => setactiveTab("verificacion")}
               >
                 <div className="navbar-link flex items-center py-2 rounded cursor-pointer">
@@ -122,11 +158,10 @@ export default function AccountingTab({ activeTab, setactiveTab }) {
               </li>
 
               <li
-                className={`navbar-item account-menu ${
-                  activeTab === "favoritos"
-                    ? "active text-red-500"
-                    : "text-slate-400"
-                }`}
+                className={`navbar-item account-menu ${activeTab === "favoritos"
+                  ? "active text-red-500"
+                  : "text-slate-400"
+                  }`}
                 onClick={() => setactiveTab("favoritos")}
               >
                 <div className="navbar-link flex items-center py-2 rounded cursor-pointer">
@@ -138,11 +173,10 @@ export default function AccountingTab({ activeTab, setactiveTab }) {
               </li>
 
               <li
-                className={`navbar-item account-menu ${
-                  activeTab === "mihistorial"
-                    ? "active text-red-500"
-                    : "text-slate-400"
-                }`}
+                className={`navbar-item account-menu ${activeTab === "mihistorial"
+                  ? "active text-red-500"
+                  : "text-slate-400"
+                  }`}
                 onClick={() => setactiveTab("mihistorial")}
               >
                 <div className="navbar-link flex items-center py-2 rounded cursor-pointer">
@@ -154,11 +188,10 @@ export default function AccountingTab({ activeTab, setactiveTab }) {
               </li>
 
               <li
-                className={`navbar-item account-menu ${
-                  activeTab === "salir"
-                    ? "active text-red-500"
-                    : "text-slate-400"
-                }`}
+                className={`navbar-item account-menu ${activeTab === "salir"
+                  ? "active text-red-500"
+                  : "text-slate-400"
+                  }`}
                 onClick={() => setactiveTab("salir")}
               >
                 <div className="navbar-link flex items-center py-2 rounded cursor-pointer">
@@ -172,6 +205,7 @@ export default function AccountingTab({ activeTab, setactiveTab }) {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

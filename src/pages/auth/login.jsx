@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import logo from "../../assets/images/logo-icon.png";
 import Switcher from "../../components/switcher";
 import BackToHome from "../../components/back-to-home";
 
@@ -9,8 +8,12 @@ import useUserStore from "../../store/userStore";
 
 import { Spinner } from "react-activity";
 import "react-activity/dist/library.css";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { HttpAuth } from "../../apis/HttpAuth";
-import { useEffect } from 'react';
+
+
 
 export default function Login() {
   const { login } = useUserStore();
@@ -19,8 +22,6 @@ export default function Login() {
   // Estado para controlar si está cargando
   const [isLoading, setIsLoading] = useState(false);
 
-  // Estado para almacenar los valores de los errores
-  const [errores, setErrores] = useState();
 
   // Estado para almacenar los valores de los campos
   const [formData, setFormData] = useState({
@@ -48,17 +49,31 @@ export default function Login() {
         login(response.data.usuario);
         navigate("/configuracion");
       } else if (response.status === 400) {
-        setErrores(response.data.error);
+        toast.error(response.data.error, {
+          position: "top-right",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
         setIsLoading(false);
-        setTimeout(() => {
-          setErrores(null);
-        }, 1500);
       } else {
-        alert(response.data.error);
+        toast.error(response.data.error, {
+          position: "top-right",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        setIsLoading(false);
       }
     });
   };
-  
+
   return (
     <>
       <section className="md:h-screen py-36 flex items-center relative overflow-hidden zoom-image">
@@ -142,6 +157,7 @@ export default function Login() {
       </section>
       <Switcher />
       <BackToHome />
+      <ToastContainer />
     </>
   );
 }

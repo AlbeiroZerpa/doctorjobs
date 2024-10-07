@@ -7,7 +7,7 @@ export const HttpAuth = {
     try {
       const headers = new Headers();
       headers.append("Content-Type", "application/json");
-      let consultaRegistro = await fetch(`${url}registrarMedico`, {
+      let consultaRegistro = await fetch(`${url}registrar`, {
         method: "POST",
         headers: headers,
         body: JSON.stringify(data),
@@ -42,23 +42,4 @@ export const HttpAuth = {
       return { error: "Error de servidor" };
     }
   },
-
-  ActualizarPerfilMedico: async (data) => {
-    try {
-      const headers = new Headers();
-      headers.append("Content-Type", "application/json");
-      let consultaActualizarPerfilMedico = await fetch(
-        `${url}actualizarPerfilMedico`,
-        { method: "POST", headers: headers, body: JSON.stringify(data) }
-      );
-      let resconsultaActualizarPerfilMedico = await consultaActualizarPerfilMedico.json();
-      let consultaFinal = {
-        status: consultaActualizarPerfilMedico.status,
-        data: resconsultaActualizarPerfilMedico,
-      };
-      return consultaFinal;
-    } catch (err) {
-      return { error: "Error de servidor" };
-    }
-  }
 };

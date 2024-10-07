@@ -8,6 +8,11 @@ import useUserStore from "../../store/userStore";
 
 import { Spinner } from "react-activity";
 import "react-activity/dist/library.css";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
+
 import { FiEye } from "../../assets/icons/vander";
 import { HttpAuth } from "../../apis/HttpAuth";
 
@@ -21,8 +26,6 @@ export default function Signup() {
   // Estado para controlar la vision de contraseña
   const [showPassword, setShowPassword] = useState(false);
 
-  // Estado para almacenar los valores de los errores
-  const [error, setError] = useState(null);
 
   // Estado para almacenar los valores de los campos
   const [formData, setFormData] = useState({
@@ -53,11 +56,16 @@ export default function Signup() {
         login(response.data.medico);
         navigate("/signup-success");
       } else if (response.status === 400) {
-        setError(response.data.error);
+        toast.error(response.data.error, {
+          position: "top-right",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
         setIsLoading(false);
-        setTimeout(() => {
-          setError(null);
-        }, 1500);
       } else {
         alert(response.data.error);
       }
@@ -137,11 +145,10 @@ export default function Signup() {
                         placeholder="Contraseña"
                         required
                       />
-                                            <FiEye
+                      <FiEye
                         onClick={() => setShowPassword(!showPassword)}
-                        className={`w-5 h-4 absolute top-6 start-2 cursor-pointer ${
-                          showPassword && "text-red-500"
-                        }`}
+                        className={`w-5 h-4 absolute top-6 start-2 cursor-pointer ${showPassword && "text-red-500"
+                          }`}
                       ></FiEye>
                     </div>
                   </div>
@@ -165,10 +172,6 @@ export default function Signup() {
                       </label>
                     </div>
                   </div>
-
-                  {error !== null && (
-                    <label className="text-red-600 mb-4">{error}</label>
-                  )}
 
                   <div className="mb-4">
                     <button
@@ -202,6 +205,7 @@ export default function Signup() {
       </section>
       <Switcher />
       <BackToHome />
+      <ToastContainer />
     </>
   );
 }
